@@ -35,31 +35,34 @@ export const navLinks: NavLink[] = [
 
 export const projects: Project[] = [
   {
-    title: "Nexus Fintech Platform",
-    description:
-      "Sistema de gestão financeira em tempo real com dashboards dinâmicos e segurança de ponta.",
+    title: "Site Marques Makers 3D",
+    description: `Loja virtual desenvolvida para apresentação e divulgação de produtos produzidos em impressão 3D. O projeto foi criado com foco em design moderno, navegação simples e responsividade.\n\nObjetivo: Criar uma vitrine digital moderna para exposição de produtos personalizados em impressão 3D.\n\nFuncionalidades:\n• Catálogo de produtos\n• Layout responsivo\n• Estrutura de loja virtual\n• Apresentação visual dos produtos\n• Navegação simples e intuitiva`,
     image: projectNexus,
-    tags: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    tags: ["HTML5", "CSS3"],
   },
   {
-    title: "Lumina E-commerce",
-    description:
-      "Plataforma de e-commerce minimalista focada em performance e experiência de compra fluida.",
+    title: "Wall Seventy",
+    description: `Projeto de uma loja de roupas desenvolvido com foco em visual moderno e experiência do usuário, apresentando uma interface limpa e estilizada.\n\nObjetivo: Desenvolver uma landing page estilizada para uma marca de roupas com foco em identidade visual e apresentação de produtos.\n\nFuncionalidades:\n• Página inicial moderna\n• Exibição de produtos\n• Layout responsivo\n• Estrutura visual voltada para e-commerce`,
     image: projectLumina,
-    tags: ["Next.js", "Tailwind", "Stripe"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    tags: ["HTML5", "CSS3"],
   },
   {
-    title: "Orbit Analytics Suite",
-    description:
-      "Suite SaaS de analytics com pipelines de dados em tempo real e visualizações customizáveis.",
+    title: "Clínica Eliane Brait",
+    description: `Site institucional desenvolvido para uma clínica de ortopedia, pensado para funcionar perfeitamente tanto em computadores quanto em dispositivos móveis.\n\nObjetivo: Criar um site moderno e responsivo para melhorar a presença digital da clínica e facilitar o acesso às informações dos pacientes.\n\nFuncionalidades:\n• Layout responsivo\n• Informações sobre serviços da clínica\n• Interface adaptada para mobile\n• Estrutura profissional e acessível`,
     image: projectOrbit,
-    tags: ["React", "GraphQL", "AWS"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    tags: ["HTML5", "CSS3"],
+  },
+  {
+    title: "Verifica Notícia",
+    description: `Sistema desenvolvido para análise de notícias e verificação de possíveis fake news através do processamento de textos e links enviados pelos usuários.\n\nObjetivo: Desenvolver uma solução tecnológica capaz de auxiliar usuários na identificação de notícias falsas através de automação e análise de conteúdo.\n\nFuncionalidades:\n• Análise de links de notícias\n• Processamento de texto\n• Integração com APIs\n• Validação e verificação de conteúdo\n• Sistema completo com backend e banco de dados`,
+    image: projectNexus,
+    tags: ["HTML5", "CSS3", "JavaScript", "Node.js", "MongoDB", "APIs"],
+  },
+  {
+    title: "HerSafe",
+    description: `Aplicativo mobile voltado para segurança feminina, permitindo compartilhamento de localização em tempo real com contatos de confiança e acionamento rápido de SOS em situações de emergência.\n\nObjetivo: Desenvolver um sistema integrado focado em proteção pessoal.\n\nFuncionalidades:\n• Compartilhamento de localização em tempo real\n• Botão de SOS\n• Alertas para contatos confiáveis\n• Sistema inspirado em rastreamento familiar\n• Estrutura mobile moderna\n• Integração entre aplicativo e backend`,
+    image: projectLumina,
+    tags: ["TypeScript", "JavaScript", "React Native", "Node.js", "MongoDB", "CSS"],
   },
 ];
 
