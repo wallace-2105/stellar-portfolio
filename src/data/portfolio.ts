@@ -64,8 +64,9 @@ export const projects: Project[] = [
 ];
 
 export const aboutParagraphs = [
-  "Sou desenvolvedor há mais de 8 anos, com paixão por construir produtos digitais que combinam excelência técnica e design atencioso. Trabalho com equipes multidisciplinares entregando soluções robustas para startups e empresas de tecnologia.",
-  "Meu foco está em arquiteturas escaláveis, qualidade de código e mentoria técnica. Acredito que software de alta qualidade nasce da combinação entre engenharia disciplinada e empatia pelo usuário final.",
+  "Automação de processos e desenvolvimento de soluções que realmente facilitam o dia a dia. Atualmente curso Análise e Desenvolvimento de Sistemas e venho construindo minha experiência unindo operações, tecnologia e desenvolvimento de software.",
+  "Minha trajetória começou em ambientes operacionais e industriais, passando por atendimento, logística, produção e suporte técnico, até chegar na área de tecnologia trabalhando diretamente com hardware, IoT e dispositivos de rastreamento. Essa mistura de experiências me trouxe uma visão muito prática sobre resolução de problemas, organização de processos e tecnologia aplicada no mundo real.",
+  "Hoje meu foco está em desenvolvimento web, automação, sistemas inteligentes e soluções modernas voltadas para produtividade, segurança e integração tecnológica. Gosto de criar projetos completos, explorar novas ferramentas e transformar ideias em aplicações funcionais.",
 ];
 
 export const techStack: TechItem[] = [
