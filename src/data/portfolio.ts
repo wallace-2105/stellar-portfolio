@@ -14,13 +14,13 @@ import projectLumina from "@/assets/project-lumina.jpg";
 import projectOrbit from "@/assets/project-orbit.jpg";
 
 export const personal = {
-  name: "Alex Rivera",
+  name: "Wallace Coimbra",
   role: "Desenvolvedor Full Stack Sênior",
-  initials: "AR",
+  initials: "WC",
   tagline: "Construindo o futuro digital com precisão.",
   description:
     "Especialista em arquiteturas escaláveis e experiências de usuário de alto nível. Foco em transformar problemas complexos em soluções elegantes e performáticas.",
-  email: "contato@alexrivera.dev",
+  email: "wallace.wcs83@gmail.com",
   location: "São Paulo, Brasil",
   cvUrl: "/cv.pdf",
 };
@@ -147,8 +147,8 @@ export const tools: Tool[] = [
 ];
 
 export const socials: SocialLink[] = [
-  { label: "GitHub", href: "https://github.com", icon: "Github" },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: "Linkedin" },
+  { label: "GitHub", href: "https://github.com/wallace-2105", icon: "Github" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/wallace-coimbra2105/", icon: "Linkedin" },
   { label: "Twitter", href: "https://twitter.com", icon: "Twitter" },
-  { label: "Email", href: "mailto:contato@alexrivera.dev", icon: "Mail" },
+  { label: "Email", href: "mailto:wallace.wcs83@gmail.com", icon: "Mail" },
 ];
