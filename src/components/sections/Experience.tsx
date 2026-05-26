@@ -31,7 +31,7 @@ export function Experience() {
                   {exp.period}
                 </span>
               </div>
-              <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
+              <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed whitespace-pre-line">
                 {exp.description}
               </p>
             </motion.div>
