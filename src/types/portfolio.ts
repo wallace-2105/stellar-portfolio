@@ -10,6 +10,8 @@ export interface Project {
   tags: string[];
   github?: string;
   demo?: string;
+  themeColor?: string;
+  features?: string[];
 }
 
 export interface TechItem {

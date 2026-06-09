@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
+import { Github, Linkedin, Twitter } from "@/components/icons";
 import { personal, socials } from "@/data/portfolio";
 
 const iconMap = { Github, Linkedin, Twitter, Mail };
