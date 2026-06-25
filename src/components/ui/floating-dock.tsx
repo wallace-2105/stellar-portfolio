@@ -48,7 +48,7 @@ function FloatingDockDesktop({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-14 gap-3 items-end rounded-2xl bg-black/50 border border-white/[0.08] px-4 pb-3 backdrop-blur-xl shadow-2xl relative",
+        "mx-auto hidden md:flex h-14 gap-3 items-end rounded-2xl bg-black/50 border border-white/[0.08] px-4 pb-3 backdrop-blur-xl shadow-2xl relative overflow-visible",
         className
       )}
     >
@@ -120,11 +120,11 @@ function IconContainer({
         <AnimatePresence>
           {hovered && (
             <motion.div
-              initial={{ opacity: 0, y: 6, x: "-50%" }}
+              initial={{ opacity: 0, y: -4, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
-              exit={{ opacity: 0, y: 4, x: "-50%" }}
+              exit={{ opacity: 0, y: -2, x: "-50%" }}
               transition={{ duration: 0.15 }}
-              className="px-2.5 py-1 rounded-md bg-neutral-900/95 border border-neutral-700/60 text-white font-medium text-[11px] absolute left-1/2 -top-9 whitespace-nowrap shadow-xl z-50 pointer-events-none backdrop-blur-sm"
+              className="px-2.5 py-1 rounded-md bg-neutral-900/95 border border-neutral-700/60 text-white font-medium text-[11px] absolute left-1/2 -bottom-9 whitespace-nowrap shadow-xl z-[100] pointer-events-none backdrop-blur-sm"
             >
               {title}
             </motion.div>

@@ -7,6 +7,9 @@ import { useState } from "react";
 // ─── Tech colour map for glow effects ───────────────────────────────────────
 const TECH_COLORS: Record<string, string> = {
   TypeScript:  "#3178C6",
+  JavaScript:  "#F7DF1E",
+  HTML5:       "#E34F26",
+  CSS:         "#1572B6",
   React:       "#61DAFB",
   "Next.js":   "#ffffff",
   Tailwind:    "#06B6D4",
@@ -22,6 +25,31 @@ const TECH_COLORS: Record<string, string> = {
 
 // ─── Corrected official SVG logos ────────────────────────────────────────────
 const TECH_LOGOS: Record<string, React.ReactNode> = {
+  // ─── JavaScript ───────────────────────────────────────────────────────────────
+  JavaScript: (
+    <svg className="w-full h-full" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+      <rect width="256" height="256" fill="#F7DF1E" />
+      <path d="M67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371 7.905 0 12.889-3.092 12.889-15.12v-81.798h24.058v82.138c0 24.917-14.606 36.259-35.916 36.259-19.245 0-30.416-9.979-36.086-21.994m88.56-3.244l19.588-11.374c5.157 8.421 11.859 14.607 23.715 14.607 9.964 0 16.321-4.984 16.321-11.858 0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.395-28.871-16.673-28.871-36.26 0-18.044 13.748-31.792 35.229-31.792 15.294 0 26.292 5.328 34.196 19.247l-18.731 12.029c-4.125-7.394-8.591-10.315-15.465-10.315-7.046 0-11.514 4.468-11.514 10.315 0 7.217 4.468 10.143 14.778 14.608l6.013 2.581c20.45 8.765 31.963 17.7 31.963 37.804 0 21.654-17.012 33.51-39.867 33.51-22.339 0-36.774-10.654-43.814-24.542" fill="#000" />
+    </svg>
+  ),
+  // ─── HTML5 ────────────────────────────────────────────────────────────────────
+  HTML5: (
+    <svg className="w-full h-full" viewBox="0 0 452 520" xmlns="http://www.w3.org/2000/svg">
+      <path d="M41.4 460.7L0 0h452l-41.5 460.6L226 520" fill="#E34F26" />
+      <path d="M226 482.8l149.3-41.4 35.4-396.4H226" fill="#EF652A" />
+      <path d="M226 212.5h-75.2l-5.2-58.2H226v-56.9H85.1l1.4 15.5 14.3 160.5H226zm0 147.3l-.3.1-63-17-4-44.8H101l7.9 88.3 117 32.5.3-.1z" fill="#fff" />
+      <path d="M226 212.5v56.9h70l-6.6 73.7-63.4 17v59.1l117.3-32.5.9-9.7 13.4-150.1 1.4-14.4H226zm0-155.1v56.9h137.8l1.1-12.2 2.5-28.2 1.4-16.5z" fill="#EBEBEB" />
+    </svg>
+  ),
+  // ─── CSS ──────────────────────────────────────────────────────────────────────
+  CSS: (
+    <svg className="w-full h-full" viewBox="0 0 452 520" xmlns="http://www.w3.org/2000/svg">
+      <path d="M41.4 460.7L0 0h452l-41.5 460.6L226 520" fill="#1572B6" />
+      <path d="M226 482.8l149.3-41.4 35.4-396.4H226" fill="#33A9DC" />
+      <path d="M226 212.5H116.5l3.7 41.4H226v-41.4zm0-99.1H107.1l3.7 41.3H226v-41.3zm0 228.6-.3.1-74.8-20.2-5.2-58.5H104l10.3 115.3 111.4 30.9.3-.1v-67.5zm0-228.6" fill="#fff" />
+      <path d="M226 212.5v41.4h104.8l-9.8 109.7-95 25.7V448l111.3-30.8 .8-9.2 15.3-171.4 1.6-17.1H226zm0-99.1v41.3h121.8l1-10.8 2.2-24 1.5-16.5H226z" fill="#EBEBEB" />
+    </svg>
+  ),
   TypeScript: (
     <svg className="w-full h-full" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
       <rect width="256" height="256" rx="20" fill="#3178C6" />
@@ -150,7 +178,7 @@ function TechCard({ tech }: { tech: typeof techStack[number] }) {
       animate={hovered ? { y: -8 } : { y: 0 }}
       // @ts-ignore — transition inside animate
       style={{ transition: "box-shadow 0.3s" }}
-      className="relative p-5 border border-white/[0.05] bg-card/40 backdrop-blur-sm rounded-xl transition-colors duration-300 text-center group cursor-default overflow-hidden"
+      className="relative p-6 border border-white/[0.06] bg-card/40 backdrop-blur-sm rounded-2xl transition-colors duration-300 text-center group cursor-default overflow-hidden"
     >
       {/* Glow layer behind — colour from tech brand */}
       <motion.div
@@ -177,7 +205,7 @@ function TechCard({ tech }: { tech: typeof techStack[number] }) {
 
       {/* Icon */}
       <motion.div
-        className="size-10 mx-auto mb-3 flex items-center justify-center"
+        className="size-12 mx-auto mb-4 flex items-center justify-center"
         animate={hovered ? { scale: 1.18 } : { scale: 1 }}
         transition={{ type: "spring", stiffness: 300, damping: 18 }}
       >

@@ -7,7 +7,7 @@ import { useTheme } from "@/hooks/use-theme";
 export function Navbar() {
   const { theme, toggle } = useTheme();
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(true);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -20,11 +20,11 @@ export function Navbar() {
     <motion.nav
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`fixed top-0 w-full z-50 border-b transition-colors ${
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className={`fixed top-0 w-full z-50 border-b transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md border-border"
-          : "bg-transparent border-transparent"
+          ? "bg-background/90 backdrop-blur-md border-border shadow-sm"
+          : "bg-background/60 backdrop-blur-sm border-border/40"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
