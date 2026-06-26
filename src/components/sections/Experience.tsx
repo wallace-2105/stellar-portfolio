@@ -5,14 +5,39 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { X, Cpu, Croissant, Utensils } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+import scopeLogo from "@/assets/scope.png";
+import goldpanLogo from "@/assets/goldpan.png";
+import mecLogo from "@/assets/mec.png";
+
 // ─── Company Logos ────────────────────────────────────────────────────────
+function CompanyLogo({ src, alt, fallback }: { src: string, alt: string, fallback: React.ReactNode }) {
+  const [error, setError] = useState(false);
+  
+  if (error) return <>{fallback}</>;
+  
+  return (
+    <img 
+      src={src} 
+      alt={alt} 
+      className="size-12 object-contain rounded-lg shadow-sm"
+      onError={() => setError(true)}
+    />
+  );
+}
+
 const COMPANY_LOGOS: Record<string, React.ReactNode> = {
-  "Scope Technology": <Cpu className="size-8 text-blue-500" strokeWidth={1.5} />,
-  "Gold Pan": <Croissant className="size-8 text-yellow-500" strokeWidth={1.5} />,
+  "Scope Technology": <CompanyLogo src={scopeLogo} alt="Scope Technology" fallback={<Cpu className="size-8 text-blue-500" strokeWidth={1.5} />} />,
+  "Gold Pan": <CompanyLogo src={goldpanLogo} alt="Gold Pan" fallback={<Croissant className="size-8 text-yellow-500" strokeWidth={1.5} />} />,
   "McDonald's": (
-    <svg className="size-8" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 40C10 15 20 10 25 25C30 10 40 15 40 40" stroke="#FFC72C" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
+    <CompanyLogo 
+      src={mecLogo} 
+      alt="McDonald's" 
+      fallback={
+        <svg className="size-8" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 40C10 15 20 10 25 25C30 10 40 15 40 40" stroke="#FFC72C" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      } 
+    />
   ),
 };
 
