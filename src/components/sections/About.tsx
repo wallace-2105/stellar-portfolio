@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { Target, Sparkles, Users } from "lucide-react";
+import { Zap, Laptop, Search } from "lucide-react";
 import { aboutParagraphs, personal } from "@/data/portfolio";
 import { SectionHeading } from "@/components/SectionHeading";
-import avatarImg from "@/assets/avatar.png";
+import avatarImg from "@/assets/wallace.jpg";
 
 const highlights = [
-  { icon: Target, title: "Orientado a resultados", text: "Entregas focadas em impacto mensurável." },
-  { icon: Sparkles, title: "Qualidade técnica", text: "Código limpo, testado e escalável." },
-  { icon: Users, title: "Trabalho em equipe", text: "Colaboração e mentoria como pilares." },
+  { icon: Zap, title: "Automação de Processos", text: "Redução de tarefas manuais e aumento da produtividade." },
+  { icon: Laptop, title: "Desenvolvimento Web", text: "Criação de aplicações modernas, responsivas e funcionais." },
+  { icon: Search, title: "Resolução de Problemas", text: "Foco em análise, diagnóstico e melhoria contínua." },
 ];
 
 export function About() {
@@ -35,33 +35,6 @@ export function About() {
                 alt={personal.name}
                 className="size-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700 ease-out scale-100 group-hover:scale-105"
               />
-              
-              {/* Overlay with info on how to replace */}
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6 text-primary mb-2 animate-bounce"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z"
-                  />
-                </svg>
-                <p className="text-white text-xs font-semibold">Substitua por sua foto</p>
-                <p className="text-white/60 text-[10px] mt-1 max-w-[200px]">
-                  Basta substituir o arquivo em <code className="bg-white/10 px-1 py-0.5 rounded">src/assets/avatar.png</code>
-                </p>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -86,11 +59,14 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="p-5 rounded-xl border border-border bg-card hover:border-primary/30 transition-colors"
+                className="relative group p-5 rounded-xl border border-white/[0.05] bg-card hover:bg-white/[0.02] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-primary/20 hover:border-primary/50 overflow-hidden"
               >
-                <Icon className="size-5 text-primary mb-3" />
-                <h4 className="font-semibold text-foreground text-sm mb-1">{title}</h4>
-                <p className="text-xs text-muted-foreground">{text}</p>
+                {/* Subtle gradient glow effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                
+                <Icon className="size-6 text-primary mb-3 group-hover:scale-110 transition-transform duration-500" />
+                <h4 className="font-semibold text-foreground text-sm mb-2 relative z-10">{title}</h4>
+                <p className="text-xs text-muted-foreground relative z-10 leading-relaxed">{text}</p>
               </motion.div>
             ))}
           </div>
