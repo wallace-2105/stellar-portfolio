@@ -12,10 +12,10 @@ import type {
 import projectNexus from "@/assets/project-nexus.jpg";
 import projectLumina from "@/assets/project-lumina.jpg";
 import projectOrbit from "@/assets/project-orbit.jpg";
-import cruzeirodosulLogo from "@/assets/cruzeirodosul.jpg";
-import obrasocialLogo from "@/assets/obrasocialdombosco.jpg";
+import cruzeirodosulLogo from "@/assets/logo-cruzeiro-do-sul-estrela.png";
+import obrasocialLogo from "@/assets/obrasocial.png";
 import bradescoLogo from "@/assets/bradesco.jpg";
-import awsLogo from "@/assets/AWS.jpg";
+import awsLogo from "@/assets/aws.png";
 
 export const personal = {
   name: "Wallace Coimbra",
@@ -183,32 +183,37 @@ export const education: Education[] = [
 ];
 
 export const languages: Language[] = [
+  { name: "Português", level: "Nativo" },
   { name: "Inglês", level: "Intermediário" },
+  { name: "Espanhol", level: "Básico" },
 ];
 
 export const certificates: Certificate[] = [
   {
     title: "Git e GitHub",
     issuer: "Fundação Bradesco",
-    year: "2024",
+    year: "2026",
     type: "certification",
     image: bradescoLogo,
+    glowColor: "#CC092F",
     skills: ["Branch", "Commit", "Pull Request", "Open Source", "DevOps", "Version Control"],
   },
   {
     title: "AWS Cloud Practitioner Essentials",
     issuer: "AWS Skill Builder",
-    year: "2024",
+    year: "2026",
     type: "certification",
     image: awsLogo,
+    glowColor: "#FF9900",
     skills: ["Cloud Computing", "EC2", "S3", "Infrastructure", "Cloud Services", "Security"],
   },
   {
     title: "SQL",
     issuer: "Fundação Bradesco",
-    year: "2024",
+    year: "2026",
     type: "certification",
     image: bradescoLogo,
+    glowColor: "#CC092F",
     skills: ["PostgreSQL", "Relational Database", "MySQL"],
   },
 ];
@@ -235,5 +240,5 @@ export const socials: SocialLink[] = [
   { label: "GitHub", href: "https://github.com/wallace-2105", icon: "Github" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/wallace-coimbra2105/", icon: "Linkedin" },
   { label: "Twitter", href: "https://twitter.com", icon: "Twitter" },
-  { label: "Email", href: "mailto:wallace.wcs83@gmail.com", icon: "Mail" },
+  { label: "Email", href: "https://mail.google.com/mail/?view=cm&to=wallace.wcs83@gmail.com", icon: "Mail" },
 ];

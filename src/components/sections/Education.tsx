@@ -27,11 +27,11 @@ export function Education() {
                   <div className="flex items-start gap-4 mb-3">
                     {/* Institution Logo */}
                     {item.logo && (
-                      <div className="size-14 rounded-xl overflow-hidden border border-white/10 bg-white/5 shrink-0 flex items-center justify-center">
+                      <div className="size-14 rounded-xl overflow-hidden border border-white/10 bg-white shrink-0 flex items-center justify-center p-1.5">
                         <img
                           src={item.logo}
                           alt={item.institution}
-                          className="size-full object-cover"
+                          className="size-full object-contain"
                         />
                       </div>
                     )}

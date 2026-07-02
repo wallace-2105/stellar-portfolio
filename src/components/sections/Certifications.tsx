@@ -17,7 +17,9 @@ export function Certifications() {
 
         {/* ── Certifications — always visible ── */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {certifications.map((cert, i) => (
+          {certifications.map((cert, i) => {
+            const glowColor = cert.glowColor || "#ffffff";
+            return (
             <motion.div
               key={cert.title}
               initial={{ opacity: 0, y: 20 }}
@@ -25,10 +27,19 @@ export function Certifications() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
               whileHover={{ y: -4 }}
-              className="relative p-6 rounded-xl border border-border bg-card hover:border-primary/40 transition-all flex flex-col h-full group overflow-hidden"
+              className="relative p-6 rounded-xl border bg-card transition-all flex flex-col h-full group overflow-hidden"
+              style={{
+                borderColor: `${glowColor}30`,
+                boxShadow: `0 0 20px -4px ${glowColor}20, 0 0 8px -2px ${glowColor}15, inset 0 0 12px -6px ${glowColor}10`,
+              }}
             >
-              {/* Premium glow on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-xl" />
+              {/* Persistent brand glow */}
+              <div
+                className="absolute inset-0 rounded-xl pointer-events-none transition-opacity duration-500 opacity-60 group-hover:opacity-100"
+                style={{
+                  background: `radial-gradient(ellipse at 50% 100%, ${glowColor}18 0%, transparent 70%)`,
+                }}
+              />
 
               {/* Star badge — top right */}
               <div className="absolute top-3 right-3 flex items-center gap-1.5">
@@ -46,11 +57,11 @@ export function Certifications() {
               {/* Institution logo */}
               <div className="flex items-start gap-4 mb-4">
                 {cert.image ? (
-                  <div className="size-12 rounded-lg overflow-hidden border border-white/10 bg-white/5 shrink-0">
+                  <div className="size-12 rounded-lg overflow-hidden border border-white/10 bg-white shrink-0 p-1.5 flex items-center justify-center">
                     <img
                       src={cert.image}
                       alt={cert.issuer}
-                      className="size-full object-cover"
+                      className="size-full object-contain"
                     />
                   </div>
                 ) : (
@@ -93,7 +104,7 @@ export function Certifications() {
                 whileHover={{ opacity: 1 }}
               />
             </motion.div>
-          ))}
+          );})}
         </div>
 
         {/* ── Courses — Accordion ── */}

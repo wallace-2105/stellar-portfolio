@@ -50,6 +50,7 @@ export interface Certificate {
   skills?: string[];
   image?: string;
   type?: "certification" | "course";
+  glowColor?: string;
 }
 
 export interface Tool {
