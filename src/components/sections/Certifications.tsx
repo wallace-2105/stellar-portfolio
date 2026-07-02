@@ -13,7 +13,7 @@ export function Certifications() {
   return (
     <section id="certificates" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <SectionHeading eyebrow="Credenciais" title="Certificados & Cursos" />
+        <SectionHeading eyebrow="Credenciais" title="Certificações & Cursos" />
 
         {/* ── Certifications — always visible ── */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -26,18 +26,32 @@ export function Certifications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              whileHover={{ y: -4 }}
-              className="relative p-6 rounded-xl border bg-card transition-all flex flex-col h-full group overflow-hidden"
+              whileHover={{ y: -6 }}
+              className="relative p-6 rounded-xl border bg-card transition-all duration-300 flex flex-col h-full group overflow-hidden"
               style={{
-                borderColor: `${glowColor}30`,
-                boxShadow: `0 0 20px -4px ${glowColor}20, 0 0 8px -2px ${glowColor}15, inset 0 0 12px -6px ${glowColor}10`,
+                borderColor: `${glowColor}35`,
+                boxShadow: `0 0 24px -4px ${glowColor}25, 0 0 10px -2px ${glowColor}18, inset 0 0 14px -6px ${glowColor}12`,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = `${glowColor}70`;
+                e.currentTarget.style.boxShadow = `0 0 35px -4px ${glowColor}45, 0 4px 20px -4px ${glowColor}30, inset 0 0 20px -6px ${glowColor}20`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = `${glowColor}35`;
+                e.currentTarget.style.boxShadow = `0 0 24px -4px ${glowColor}25, 0 0 10px -2px ${glowColor}18, inset 0 0 14px -6px ${glowColor}12`;
               }}
             >
-              {/* Persistent brand glow */}
+              {/* Persistent brand glow — intensifies on hover */}
               <div
-                className="absolute inset-0 rounded-xl pointer-events-none transition-opacity duration-500 opacity-60 group-hover:opacity-100"
+                className="absolute inset-0 rounded-xl pointer-events-none transition-all duration-500 opacity-70 group-hover:opacity-100"
                 style={{
-                  background: `radial-gradient(ellipse at 50% 100%, ${glowColor}18 0%, transparent 70%)`,
+                  background: `radial-gradient(ellipse at 50% 100%, ${glowColor}22 0%, transparent 65%)`,
+                }}
+              />
+              <div
+                className="absolute -inset-px rounded-xl pointer-events-none transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+                style={{
+                  background: `radial-gradient(ellipse at 50% 0%, ${glowColor}15 0%, transparent 60%)`,
                 }}
               />
 

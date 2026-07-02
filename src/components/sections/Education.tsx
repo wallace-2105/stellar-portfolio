@@ -22,7 +22,7 @@ export function Education() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className="p-6 rounded-xl border border-border bg-card hover:border-primary/30 transition-colors"
+                  className="p-6 rounded-xl border border-border bg-card transition-all duration-300 hover:border-primary/25 hover:shadow-[0_2px_16px_-4px] hover:shadow-primary/10 hover:-translate-y-0.5"
                 >
                   <div className="flex items-start gap-4 mb-3">
                     {/* Institution Logo */}
@@ -71,7 +71,7 @@ export function Education() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className="p-6 rounded-xl border border-border bg-card flex justify-between items-center hover:border-primary/30 transition-colors"
+                  className="p-6 rounded-xl border border-border bg-card flex justify-between items-center transition-all duration-300 hover:border-primary/25 hover:shadow-[0_2px_16px_-4px] hover:shadow-primary/10 hover:-translate-y-0.5"
                 >
                   <span className="font-semibold">{lang.name}</span>
                   <span className="text-xs text-primary font-bold uppercase tracking-widest">
