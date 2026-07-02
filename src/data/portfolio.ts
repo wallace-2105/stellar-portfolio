@@ -12,6 +12,10 @@ import type {
 import projectNexus from "@/assets/project-nexus.jpg";
 import projectLumina from "@/assets/project-lumina.jpg";
 import projectOrbit from "@/assets/project-orbit.jpg";
+import cruzeirodosulLogo from "@/assets/cruzeirodosul.jpg";
+import obrasocialLogo from "@/assets/obrasocialdombosco.jpg";
+import bradescoLogo from "@/assets/bradesco.jpg";
+import awsLogo from "@/assets/AWS.jpg";
 
 export const personal = {
   name: "Wallace Coimbra",
@@ -122,21 +126,18 @@ export const aboutParagraphs = [
 ];
 
 export const techStack: TechItem[] = [
-  { name: "TypeScript", abbr: "TS", category: "Linguagem" },
-  { name: "JavaScript", abbr: "JS", category: "Linguagem" },
-  { name: "HTML5", abbr: "HTML", category: "Linguagem" },
-  { name: "CSS", abbr: "CSS", category: "Estilização" },
   { name: "React", abbr: "RE", category: "Frontend" },
-  { name: "Next.js", abbr: "NX", category: "Framework" },
-  { name: "Tailwind", abbr: "TW", category: "Estilização" },
+  { name: "JavaScript", abbr: "JS", category: "Linguagem" },
   { name: "Node.js", abbr: "ND", category: "Backend" },
-  { name: "PostgreSQL", abbr: "PG", category: "Banco" },
-  { name: "GraphQL", abbr: "GQ", category: "API" },
-  { name: "Docker", abbr: "DK", category: "DevOps" },
-  { name: "AWS", abbr: "AW", category: "Cloud" },
-  { name: "Redis", abbr: "RD", category: "Cache" },
+  { name: "Java", abbr: "JV", category: "Linguagem" },
   { name: "Python", abbr: "PY", category: "Linguagem" },
-  { name: "Go", abbr: "GO", category: "Linguagem" },
+  { name: "MongoDB", abbr: "MG", category: "Banco" },
+  { name: "TypeScript", abbr: "TS", category: "Linguagem" },
+  { name: "Tailwind CSS", abbr: "TW", category: "Estilização" },
+  { name: "HTML", abbr: "HT", category: "Linguagem" },
+  { name: "CSS", abbr: "CS", category: "Estilização" },
+  { name: "MySQL", abbr: "MY", category: "Banco" },
+  { name: "React Native", abbr: "RN", category: "Mobile" },
 ];
 
 export const experiences: Experience[] = [
@@ -165,41 +166,69 @@ export const experiences: Experience[] = [
 
 export const education: Education[] = [
   {
-    title: "Bacharelado em Ciência da Computação",
-    institution: "Universidade Federal",
-    period: "2012 — 2016",
-    description: "Foco em algoritmos, sistemas distribuídos e engenharia de software.",
+    title: "Análise e Desenvolvimento de Sistemas",
+    institution: "Cruzeiro do Sul",
+    period: "2025 — 2026",
+    type: "Tecnólogo",
+    description: "Formação voltada para criação de sistemas, desenvolvimento web, banco de dados, programação e boas práticas de tecnologia utilizadas pelo mercado.",
+    logo: cruzeirodosulLogo,
   },
   {
-    title: "Pós-graduação em Arquitetura de Software",
-    institution: "Instituto de Tecnologia",
-    period: "2019 — 2020",
-    description: "Padrões de arquitetura, microserviços e escalabilidade.",
+    title: "Eletricista Predial de Baixa Tensão",
+    institution: "Obra Social Dom Bosco",
+    period: "2015 — 2016",
+    description: "Capacitação prática em instalações elétricas, interpretação de diagramas, manutenção preventiva e corretiva, com foco em segurança e qualidade dos serviços.",
+    logo: obrasocialLogo,
   },
 ];
 
 export const languages: Language[] = [
-  { name: "Português", level: "Nativo" },
-  { name: "Inglês", level: "Avançado (C1)" },
-  { name: "Espanhol", level: "Intermediário (B1)" },
+  { name: "Inglês", level: "Intermediário" },
 ];
 
 export const certificates: Certificate[] = [
-  { title: "AWS Certified Solutions Architect", issuer: "Amazon Web Services", year: "2023" },
-  { title: "Professional Scrum Master I", issuer: "Scrum.org", year: "2022" },
-  { title: "Advanced React Patterns", issuer: "Frontend Masters", year: "2022" },
-  { title: "System Design for Senior Engineers", issuer: "Educative", year: "2021" },
+  {
+    title: "Git e GitHub",
+    issuer: "Fundação Bradesco",
+    year: "2024",
+    type: "certification",
+    image: bradescoLogo,
+    skills: ["Branch", "Commit", "Pull Request", "Open Source", "DevOps", "Version Control"],
+  },
+  {
+    title: "AWS Cloud Practitioner Essentials",
+    issuer: "AWS Skill Builder",
+    year: "2024",
+    type: "certification",
+    image: awsLogo,
+    skills: ["Cloud Computing", "EC2", "S3", "Infrastructure", "Cloud Services", "Security"],
+  },
+  {
+    title: "SQL",
+    issuer: "Fundação Bradesco",
+    year: "2024",
+    type: "certification",
+    image: bradescoLogo,
+    skills: ["PostgreSQL", "Relational Database", "MySQL"],
+  },
 ];
 
 export const tools: Tool[] = [
-  { name: "VS Code", category: "Desenvolvimento" },
-  { name: "Git & GitHub", category: "Desenvolvimento" },
-  { name: "Linear", category: "Produtividade" },
-  { name: "Notion", category: "Produtividade" },
-  { name: "Figma", category: "Design" },
-  { name: "Postman", category: "Desenvolvimento" },
-  { name: "Slack", category: "Comunicação" },
-  { name: "Vercel", category: "Deploy" },
+  { name: "Figma", category: "Design", color: "#F24E1E" },
+  { name: "Claude Code", category: "IA", color: "#D97757" },
+  { name: "Antigravity Avançado", category: "IA", color: "#4285F4" },
+  { name: "Expo Go", category: "Mobile", color: "#000020" },
+  { name: "Git", category: "Versionamento", color: "#F05032" },
+  { name: "GitHub", category: "Plataforma", color: "#181717" },
+  { name: "FastAPI", category: "Backend", color: "#009688" },
+  { name: "Visual Studio Code", category: "Desenvolvimento", color: "#007ACC" },
+  { name: "Canva", category: "Design", color: "#00C4CC" },
+  { name: "Codex", category: "IA", color: "#10A37F" },
+  { name: "Windows", category: "Sistema", color: "#0078D4" },
+  { name: "Microsoft Word", category: "Produtividade", color: "#2B579A" },
+  { name: "Microsoft Excel", category: "Produtividade", color: "#217346" },
+  { name: "Microsoft PowerPoint", category: "Produtividade", color: "#D24726" },
+  { name: "Microsoft Teams", category: "Comunicação", color: "#6264A7" },
 ];
 
 export const socials: SocialLink[] = [

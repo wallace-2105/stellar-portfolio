@@ -24,15 +24,34 @@ export function Education() {
                   transition={{ duration: 0.4, delay: i * 0.08 }}
                   className="p-6 rounded-xl border border-border bg-card hover:border-primary/30 transition-colors"
                 >
-                  <div className="flex justify-between items-start gap-4 mb-2">
-                    <h4 className="font-semibold">{item.title}</h4>
-                    <span className="text-xs text-muted-foreground whitespace-nowrap">
-                      {item.period}
-                    </span>
+                  <div className="flex items-start gap-4 mb-3">
+                    {/* Institution Logo */}
+                    {item.logo && (
+                      <div className="size-14 rounded-xl overflow-hidden border border-white/10 bg-white/5 shrink-0 flex items-center justify-center">
+                        <img
+                          src={item.logo}
+                          alt={item.institution}
+                          className="size-full object-cover"
+                        />
+                      </div>
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex justify-between items-start gap-4 mb-1">
+                        <h4 className="font-semibold">{item.title}</h4>
+                        <span className="text-xs text-muted-foreground whitespace-nowrap">
+                          {item.period}
+                        </span>
+                      </div>
+                      <p className="text-primary text-sm font-medium">{item.institution}</p>
+                      {item.type && (
+                        <span className="inline-block mt-1 text-[10px] uppercase tracking-widest text-muted-foreground bg-white/5 px-2 py-0.5 rounded-full border border-white/10">
+                          {item.type}
+                        </span>
+                      )}
+                    </div>
                   </div>
-                  <p className="text-primary text-sm font-medium mb-2">{item.institution}</p>
                   {item.description && (
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                    <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
                   )}
                 </motion.div>
               ))}

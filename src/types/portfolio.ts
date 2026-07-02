@@ -34,6 +34,8 @@ export interface Education {
   institution: string;
   period: string;
   description?: string;
+  type?: string;
+  logo?: string;
 }
 
 export interface Language {
@@ -45,11 +47,15 @@ export interface Certificate {
   title: string;
   issuer: string;
   year: string;
+  skills?: string[];
+  image?: string;
+  type?: "certification" | "course";
 }
 
 export interface Tool {
   name: string;
   category: string;
+  color?: string;
 }
 
 export interface SocialLink {

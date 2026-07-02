@@ -33,7 +33,7 @@ export function About() {
               <img
                 src={avatarImg}
                 alt={personal.name}
-                className="size-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700 ease-out scale-100 group-hover:scale-105"
+                className="size-full object-cover rounded-xl transition-all duration-700 ease-out scale-100 group-hover:scale-105 group-hover:brightness-110 group-hover:-translate-y-1"
               />
             </div>
           </motion.div>

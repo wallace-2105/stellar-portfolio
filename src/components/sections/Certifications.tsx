@@ -1,34 +1,185 @@
 import { motion } from "framer-motion";
-import { Award } from "lucide-react";
+import { Award, Star, ChevronDown, BookOpen } from "lucide-react";
 import { certificates } from "@/data/portfolio";
 import { SectionHeading } from "@/components/SectionHeading";
+import { useState } from "react";
 
 export function Certifications() {
+  const [coursesOpen, setCoursesOpen] = useState(false);
+
+  const certifications = certificates.filter((c) => c.type === "certification");
+  const courses = certificates.filter((c) => c.type === "course");
+
   return (
     <section id="certificates" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <SectionHeading eyebrow="Credenciais" title="Certificados & Cursos" />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {certificates.map((cert, i) => (
+
+        {/* ── Certifications — always visible ── */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {certifications.map((cert, i) => (
             <motion.div
               key={cert.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.06 }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
               whileHover={{ y: -4 }}
-              className="p-6 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-soft transition-all flex flex-col h-full"
+              className="relative p-6 rounded-xl border border-border bg-card hover:border-primary/40 transition-all flex flex-col h-full group overflow-hidden"
             >
-              <div className="size-10 rounded-lg bg-primary/10 grid place-items-center mb-4">
-                <Award className="size-5 text-primary" />
+              {/* Premium glow on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-xl" />
+
+              {/* Star badge — top right */}
+              <div className="absolute top-3 right-3 flex items-center gap-1.5">
+                <motion.div
+                  animate={{ rotate: [0, 15, -15, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <Star className="size-4 text-amber-400 fill-amber-400" />
+                </motion.div>
+                <span className="text-[9px] font-bold uppercase tracking-widest text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded-full border border-amber-400/20">
+                  Destaque
+                </span>
               </div>
-              <h4 className="font-display font-bold mb-2 leading-tight">{cert.title}</h4>
-              <p className="text-sm text-muted-foreground mb-4">{cert.issuer}</p>
-              <span className="mt-auto text-xs font-bold uppercase tracking-widest text-primary">
+
+              {/* Institution logo */}
+              <div className="flex items-start gap-4 mb-4">
+                {cert.image ? (
+                  <div className="size-12 rounded-lg overflow-hidden border border-white/10 bg-white/5 shrink-0">
+                    <img
+                      src={cert.image}
+                      alt={cert.issuer}
+                      className="size-full object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="size-10 rounded-lg bg-primary/10 grid place-items-center shrink-0">
+                    <Award className="size-5 text-primary" />
+                  </div>
+                )}
+                <div className="min-w-0 pt-1">
+                  <h4 className="font-display font-bold leading-tight relative z-10">{cert.title}</h4>
+                  <p className="text-sm text-muted-foreground mt-0.5">{cert.issuer}</p>
+                </div>
+              </div>
+
+              {/* Skills */}
+              {cert.skills && cert.skills.length > 0 && (
+                <div className="flex flex-wrap gap-1.5 mt-auto pt-4 relative z-10">
+                  {cert.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="text-[10px] font-medium uppercase tracking-wider text-primary/80 bg-primary/8 px-2 py-1 rounded-md border border-primary/10"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {/* Year */}
+              <span className="mt-4 text-xs font-bold uppercase tracking-widest text-primary relative z-10">
                 {cert.year}
               </span>
+
+              {/* Hover shimmer */}
+              <motion.div
+                className="absolute inset-0 pointer-events-none rounded-xl"
+                style={{
+                  background: "linear-gradient(135deg, oklch(1 0 0 / 0.03) 0%, transparent 60%)",
+                }}
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+              />
             </motion.div>
           ))}
+        </div>
+
+        {/* ── Courses — Accordion ── */}
+        <div className="mt-10">
+          <motion.button
+            onClick={() => setCoursesOpen(!coursesOpen)}
+            className="w-full flex items-center justify-between p-5 rounded-xl border border-border bg-card hover:border-primary/30 transition-colors group"
+            whileHover={{ scale: 1.005 }}
+            whileTap={{ scale: 0.995 }}
+          >
+            <div className="flex items-center gap-3">
+              <div className="size-10 rounded-lg bg-primary/10 grid place-items-center">
+                <BookOpen className="size-5 text-primary" />
+              </div>
+              <div className="text-left">
+                <h3 className="font-display font-bold text-base">Cursos</h3>
+                <p className="text-xs text-muted-foreground">
+                  {courses.length > 0
+                    ? `${courses.length} curso${courses.length > 1 ? "s" : ""} concluído${courses.length > 1 ? "s" : ""}`
+                    : "Nenhum curso adicional cadastrado"}
+                </p>
+              </div>
+            </div>
+            <motion.div
+              animate={{ rotate: coursesOpen ? 180 : 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <ChevronDown className="size-5 text-muted-foreground group-hover:text-primary transition-colors" />
+            </motion.div>
+          </motion.button>
+
+          <motion.div
+            initial={false}
+            animate={{
+              height: coursesOpen ? "auto" : 0,
+              opacity: coursesOpen ? 1 : 0,
+            }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            {courses.length > 0 ? (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+                {courses.map((course, i) => (
+                  <motion.div
+                    key={course.title}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: i * 0.05 }}
+                    className="p-5 rounded-xl border border-border bg-card hover:border-primary/30 transition-colors"
+                  >
+                    <div className="flex items-start gap-3 mb-2">
+                      {course.image ? (
+                        <div className="size-10 rounded-lg overflow-hidden border border-white/10 bg-white/5 shrink-0">
+                          <img src={course.image} alt={course.issuer} className="size-full object-cover" />
+                        </div>
+                      ) : (
+                        <div className="size-9 rounded-lg bg-primary/10 grid place-items-center shrink-0">
+                          <Award className="size-4 text-primary" />
+                        </div>
+                      )}
+                      <div>
+                        <h4 className="font-semibold text-sm">{course.title}</h4>
+                        <p className="text-xs text-muted-foreground">{course.issuer}</p>
+                      </div>
+                    </div>
+                    {course.skills && course.skills.length > 0 && (
+                      <div className="flex flex-wrap gap-1 mt-3">
+                        {course.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="text-[9px] font-medium uppercase tracking-wider text-muted-foreground bg-white/5 px-1.5 py-0.5 rounded border border-white/10"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              <div className="pt-4 pb-2 text-sm text-muted-foreground text-center">
+                Nenhum curso adicionado ainda.
+              </div>
+            )}
+          </motion.div>
         </div>
       </div>
     </section>
