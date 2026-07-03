@@ -219,29 +219,22 @@ export const certificates: Certificate[] = [
 ];
 
 export const tools: Tool[] = [
-  { name: "React", category: "Frontend", color: "#61DAFB" },
-  { name: "JavaScript", category: "Linguagem", color: "#F7DF1E" },
-  { name: "TypeScript", category: "Linguagem", color: "#3178C6" },
-  { name: "Node.js", category: "Backend", color: "#339933" },
-  { name: "Python", category: "Linguagem", color: "#3776AB" },
-  { name: "Java", category: "Linguagem", color: "#ED8B00" },
-  { name: "MongoDB", category: "Banco de Dados", color: "#47A248" },
-  { name: "MySQL", category: "Banco de Dados", color: "#4479A1" },
-  { name: "HTML5", category: "Linguagem", color: "#E34F26" },
-  { name: "CSS3", category: "Estilização", color: "#1572B6" },
-  { name: "Tailwind CSS", category: "Estilização", color: "#06B6D4" },
-  { name: "React Native", category: "Mobile", color: "#61DAFB" },
+  { name: "Figma", category: "Design", color: "#F24E1E" },
+  { name: "Claude Code", category: "IA", color: "#D97757" },
+  { name: "Antigravity", category: "IA", color: "#4285F4" },
+  { name: "Expo", category: "Mobile", color: "#000020" },
   { name: "Git", category: "Versionamento", color: "#F05032" },
   { name: "GitHub", category: "Plataforma", color: "#181717" },
+  { name: "FastAPI", category: "Backend", color: "#009688" },
   { name: "Visual Studio Code", category: "IDE", color: "#007ACC" },
-  { name: "Figma", category: "Design", color: "#F24E1E" },
   { name: "Canva", category: "Design", color: "#00C4CC" },
+  { name: "Codex", category: "IA", color: "#10A37F" },
+  { name: "Aceternity UI", category: "UI Library", color: "#6366F1" },
+  { name: "Windows", category: "Sistema", color: "#0078D4" },
   { name: "Microsoft Word", category: "Produtividade", color: "#2B579A" },
   { name: "Microsoft Excel", category: "Produtividade", color: "#217346" },
   { name: "Microsoft PowerPoint", category: "Produtividade", color: "#D24726" },
   { name: "Microsoft Teams", category: "Comunicação", color: "#6264A7" },
-  { name: "Windows", category: "Sistema", color: "#0078D4" },
-  { name: "Antigravity", category: "IA", color: "#4285F4" },
 ];
 
 export const socials: SocialLink[] = [

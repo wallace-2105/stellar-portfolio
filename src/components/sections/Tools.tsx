@@ -185,6 +185,37 @@ const TOOL_LOGOS: Record<string, React.ReactNode> = {
       <path d="M128 60l-60 100h40v36l60-100h-40V60z" fill="white" />
     </svg>
   ),
+  "Claude Code": (
+    <svg className="w-full h-full" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+      <rect width="256" height="256" rx="40" fill="#D97757" />
+      <path d="M128 50c-43 0-78 35-78 78s35 78 78 78 78-35 78-78-35-78-78-78zm0 130c-28.7 0-52-23.3-52-52s23.3-52 52-52 52 23.3 52 52-23.3 52-52 52z" fill="white" opacity="0.9" />
+      <circle cx="128" cy="128" r="20" fill="white" />
+    </svg>
+  ),
+  Expo: (
+    <svg className="w-full h-full" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+      <rect width="256" height="256" rx="40" fill="#000020" />
+      <path d="M128 60c-6 0-11 3-14 8L68 148c-6 10 1 22 14 22h92c13 0 20-12 14-22l-46-80c-3-5-8-8-14-8z" fill="white" />
+    </svg>
+  ),
+  FastAPI: (
+    <svg className="w-full h-full" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+      <rect width="256" height="256" rx="40" fill="#009688" />
+      <path d="M140 48l-52 80h40l-12 80 52-80h-40l12-80z" fill="white" />
+    </svg>
+  ),
+  Codex: (
+    <svg className="w-full h-full" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+      <rect width="256" height="256" rx="40" fill="#10A37F" />
+      <path d="M128 56c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-20 96l-12-12 32-32-32-32 12-12 44 44-44 44z" fill="white" />
+    </svg>
+  ),
+  "Aceternity UI": (
+    <svg className="w-full h-full" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+      <rect width="256" height="256" rx="40" fill="#6366F1" />
+      <path d="M128 60 L60 180 H100 L128 120 L156 180 H196 Z" fill="white" />
+    </svg>
+  ),
 };
 
 // ─── Premium Tool Card Component ─────────────────────────────────────────────
@@ -374,7 +405,7 @@ export function Tools() {
       <div className="max-w-7xl mx-auto relative z-10">
         <SectionHeading
           eyebrow="Workflow"
-          title="Tecnologias e Ferramentas"
+          title="Ferramentas Conhecidas"
           description="Stack completa de tecnologias e ferramentas que potencializam meu fluxo de trabalho diário e garantem entregas de alta qualidade."
         />
 
