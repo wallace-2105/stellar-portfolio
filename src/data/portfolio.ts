@@ -241,6 +241,7 @@ export const tools: Tool[] = [
   { name: "Microsoft PowerPoint", category: "Produtividade", color: "#D24726" },
   { name: "Microsoft Teams", category: "Comunicação", color: "#6264A7" },
   { name: "Windows", category: "Sistema", color: "#0078D4" },
+  { name: "Antigravity", category: "IA", color: "#4285F4" },
 ];
 
 export const socials: SocialLink[] = [

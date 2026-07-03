@@ -179,6 +179,12 @@ const TOOL_LOGOS: Record<string, React.ReactNode> = {
       <path d="M0 36.357L104.62 22.11l.045 100.914-104.57.595L0 36.357zm104.57 98.293l.076 101.064L.076 221.393l-.01-86.846 104.504.103zm12.754-114.09L255.97 0v123.49l-138.646 1.1V20.56zm138.7 105.245l-.046 123.19-138.7-19.578-.194-103.773 138.94.161z" fill="#00A4EF" />
     </svg>
   ),
+  Antigravity: (
+    <svg className="w-full h-full" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+      <rect width="256" height="256" rx="40" fill="#4285F4" />
+      <path d="M128 60l-60 100h40v36l60-100h-40V60z" fill="white" />
+    </svg>
+  ),
 };
 
 // ─── Premium Tool Card Component ─────────────────────────────────────────────
@@ -271,10 +277,10 @@ function ToolCard({ tool, index }: { tool: typeof tools[number]; index: number }
           />
 
           {/* Card content */}
-          <div className="relative z-10 flex flex-col items-center text-center p-5 sm:p-6">
+          <div className="relative z-10 flex flex-col items-center text-center p-3.5 sm:p-4">
             {/* Logo container */}
             <motion.div
-              className="relative mb-4"
+              className="relative mb-3"
               animate={{
                 scale: hovered ? 1.15 : 1,
               }}
@@ -282,7 +288,7 @@ function ToolCard({ tool, index }: { tool: typeof tools[number]; index: number }
             >
               {/* Logo background ring */}
               <div
-                className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center transition-all duration-500"
+                className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center transition-all duration-500"
                 style={{
                   background: hovered
                     ? `linear-gradient(135deg, ${visibleColor}20, ${visibleColor}08)`
@@ -290,7 +296,7 @@ function ToolCard({ tool, index }: { tool: typeof tools[number]; index: number }
                   border: `1px solid ${hovered ? `${visibleColor}30` : "rgba(255,255,255,0.06)"}`,
                 }}
               >
-                <div className="w-8 h-8 sm:w-9 sm:h-9">
+                <div className="w-6 h-6 sm:w-7 sm:h-7">
                   {TOOL_LOGOS[tool.name] ?? (
                     <div
                       className="w-full h-full rounded-lg flex items-center justify-center text-xs font-bold"
@@ -321,7 +327,7 @@ function ToolCard({ tool, index }: { tool: typeof tools[number]; index: number }
 
             {/* Tool name */}
             <h3
-              className="font-semibold text-sm sm:text-base leading-tight mb-1 transition-colors duration-300"
+              className="font-semibold text-xs sm:text-sm leading-tight mb-0.5 transition-colors duration-300"
               style={{
                 color: hovered ? visibleColor : undefined,
               }}
