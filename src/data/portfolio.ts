@@ -13,7 +13,7 @@ import imgMarques3D from "@/assets/marques3D.jpg.png";
 import imgWall from "@/assets/walls.jpg.png";
 import imgBrait from "@/assets/clinica.jpg.png";
 import imgNoticia from "@/assets/noticia.jpg.jpeg";
-import imgHersafe from "@/assets/hersafe.jpg.jpeg";
+import imgHersafe from "@/assets/hersafe.png";
 import cruzeirodosulLogo from "@/assets/logo-cruzeiro-do-sul-estrela.png";
 import obrasocialLogo from "@/assets/obrasocial.png";
 import bradescoLogo from "@/assets/bradesco.jpg";

@@ -154,12 +154,12 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       />
 
       {/* Image container */}
-      <div className="relative overflow-hidden aspect-[16/10] shrink-0">
+      <div className="relative overflow-hidden aspect-[16/10] shrink-0 bg-black/5 dark:bg-black/30">
         <img
           src={project.image}
           alt={project.title}
           loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
 
