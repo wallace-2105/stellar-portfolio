@@ -9,9 +9,11 @@ import type {
   Tool,
   SocialLink,
 } from "@/types/portfolio";
-import projectNexus from "@/assets/project-nexus.jpg";
-import projectLumina from "@/assets/project-lumina.jpg";
-import projectOrbit from "@/assets/project-orbit.jpg";
+import imgMarques3D from "@/assets/marques3D.jpg.png";
+import imgWall from "@/assets/wall.jpg.png";
+import imgBrait from "@/assets/brait.jpg.png";
+import imgNoticia from "@/assets/noticia.jpg.jpeg";
+import imgHersafe from "@/assets/hersafe.jpg.jpeg";
 import cruzeirodosulLogo from "@/assets/logo-cruzeiro-do-sul-estrela.png";
 import obrasocialLogo from "@/assets/obrasocial.png";
 import bradescoLogo from "@/assets/bradesco.jpg";
@@ -41,11 +43,11 @@ export const projects: Project[] = [
   {
     title: "Site Marques Makers 3D",
     description: `Loja virtual desenvolvida para apresentação e divulgação de produtos produzidos em impressão 3D. O projeto foi criado com foco em design moderno, navegação simples e responsividade.`,
-    image: projectNexus,
+    image: imgMarques3D,
     tags: ["HTML5", "CSS3"],
     themeColor: "#6366f1",
-    github: "https://github.com/wallace-2105",
-    demo: "https://github.com/wallace-2105",
+    github: "https://github.com/wallace-2105/site-marques-makers-3D",
+    demo: "https://wallace-2105.github.io/site-marques-makers-3D/",
     features: [
       "Catálogo de produtos",
       "Layout responsivo",
@@ -57,11 +59,11 @@ export const projects: Project[] = [
   {
     title: "Wall Seventy",
     description: `Projeto de uma loja de roupas desenvolvido com foco em visual moderno e experiência do usuário, apresentando uma interface limpa e estilizada.`,
-    image: projectLumina,
-    tags: ["HTML5", "CSS3"],
+    image: imgWall,
+    tags: ["HTML5", "CSS3", "JavaScript"],
     themeColor: "#8b5cf6",
-    github: "https://github.com/wallace-2105",
-    demo: "https://github.com/wallace-2105",
+    github: "https://github.com/wallace-2105/wall-saventy",
+    demo: "https://wallace-2105.github.io/wall-saventy/",
     features: [
       "Página inicial moderna",
       "Exibição de produtos",
@@ -72,11 +74,11 @@ export const projects: Project[] = [
   {
     title: "Clínica Eliane Brait",
     description: `Site institucional desenvolvido para uma clínica de ortopedia, pensado para funcionar perfeitamente tanto em computadores quanto em dispositivos móveis.`,
-    image: projectOrbit,
+    image: imgBrait,
     tags: ["HTML5", "CSS3"],
     themeColor: "#06b6d4",
-    github: "https://github.com/wallace-2105",
-    demo: "https://github.com/wallace-2105",
+    github: "https://github.com/wallace-2105/clinica-eliane-brait",
+    demo: "https://wallace-2105.github.io/clinica-eliane-brait/",
     features: [
       "Layout responsivo",
       "Informações sobre serviços da clínica",
@@ -87,11 +89,11 @@ export const projects: Project[] = [
   {
     title: "Verifica Notícia",
     description: `Sistema desenvolvido para análise de notícias e verificação de possíveis fake news através do processamento de textos e links enviados pelos usuários.`,
-    image: projectNexus,
+    image: imgNoticia,
     tags: ["HTML5", "CSS3", "JavaScript", "Node.js", "MongoDB"],
     themeColor: "#10b981",
-    github: "https://github.com/wallace-2105",
-    demo: "https://github.com/wallace-2105",
+    github: "https://github.com/wallace-2105/verifica-noticia",
+    demo: "https://github.com/wallace-2105/verifica-noticia",
     features: [
       "Análise de links de notícias",
       "Processamento de texto",
@@ -103,11 +105,11 @@ export const projects: Project[] = [
   {
     title: "HerSafe",
     description: `Aplicativo mobile voltado para segurança feminina, permitindo compartilhamento de localização em tempo real com contatos de confiança e acionamento rápido de SOS em situações de emergência.`,
-    image: projectLumina,
-    tags: ["TypeScript", "JavaScript", "React Native", "Node.js", "MongoDB", "CSS"],
+    image: imgHersafe,
+    tags: ["TypeScript", "React Native", "JavaScript", "Node.js", "CSS3", "MongoDB"],
     themeColor: "#f43f5e",
-    github: "https://github.com/wallace-2105",
-    demo: "https://github.com/wallace-2105",
+    github: "https://github.com/wallace-2105/hersafe",
+    demo: "https://github.com/wallace-2105/hersafe",
     features: [
       "Compartilhamento de localização em tempo real",
       "Botão de SOS",
