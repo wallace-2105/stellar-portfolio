@@ -18,6 +18,8 @@ import cruzeirodosulLogo from "@/assets/logo-cruzeiro-do-sul-estrela.png";
 import obrasocialLogo from "@/assets/obrasocial.png";
 import bradescoLogo from "@/assets/bradesco.jpg";
 import awsLogo from "@/assets/aws.png";
+import senaiLogo from "@/assets/senai.png";
+import ifrsLogo from "@/assets/rio.png";
 
 export const personal = {
   name: "Wallace Coimbra",
@@ -217,6 +219,36 @@ export const certificates: Certificate[] = [
     image: bradescoLogo,
     glowColor: "#CC092F",
     skills: ["PostgreSQL", "Relational Database", "MySQL"],
+  },
+  {
+    title: "Power BI",
+    issuer: "SENAI",
+    year: "2024",
+    type: "certification",
+    image: senaiLogo,
+    glowColor: "#E3000F",
+    url: "/certificado-powerbi.pdf",
+    skills: ["Data Analysis", "Dashboards", "DAX", "Business Intelligence"],
+  },
+  {
+    title: "Fundamentos para Desenvolvimento Web Interativo",
+    issuer: "Instituto Federal do Rio Grande do Sul (IFRS)",
+    year: "2024",
+    type: "certification",
+    image: ifrsLogo,
+    glowColor: "#32A041",
+    url: "/certificado-javascript.pdf",
+    skills: ["JavaScript", "Lógica de Programação", "Web Interativo"],
+  },
+  {
+    title: "HTML e CSS na Prática",
+    issuer: "Fundação Bradesco",
+    year: "2024",
+    type: "certification",
+    image: bradescoLogo,
+    glowColor: "#CC092F",
+    url: "/certificado-bradesco.pdf",
+    skills: ["HTML5", "CSS3", "Web Design"],
   },
 ];
 

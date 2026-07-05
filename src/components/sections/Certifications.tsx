@@ -108,6 +108,28 @@ export function Certifications() {
                 {cert.year}
               </span>
 
+              {/* Certificate URL Button with LED border effect */}
+              {cert.url && (
+                <div className="mt-5 relative z-20">
+                  <a
+                    href={cert.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="relative inline-flex h-9 w-full overflow-hidden rounded-lg p-[1.5px] focus:outline-none hover:scale-[1.02] transition-transform active:scale-95"
+                  >
+                    <span
+                      className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite]"
+                      style={{
+                        background: `conic-gradient(from 90deg at 50% 50%, transparent 0%, ${glowColor} 50%, transparent 100%)`,
+                      }}
+                    />
+                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-[6px] bg-card px-4 py-1 text-sm font-semibold text-foreground backdrop-blur-3xl transition-colors hover:bg-card/90">
+                      Certificado
+                    </span>
+                  </a>
+                </div>
+              )}
+
               {/* Hover shimmer */}
               <motion.div
                 className="absolute inset-0 pointer-events-none rounded-xl"

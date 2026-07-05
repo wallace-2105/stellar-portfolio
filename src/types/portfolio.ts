@@ -51,6 +51,7 @@ export interface Certificate {
   image?: string;
   type?: "certification" | "course";
   glowColor?: string;
+  url?: string;
 }
 
 export interface Tool {
