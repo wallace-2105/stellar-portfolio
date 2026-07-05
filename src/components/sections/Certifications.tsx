@@ -189,9 +189,30 @@ export function Certifications() {
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: i * 0.05 }}
-                    className="p-5 rounded-xl border border-border bg-card hover:border-primary/30 transition-colors"
+                    whileHover={{ y: -4 }}
+                    className="relative p-5 rounded-xl border border-border bg-card transition-all duration-300 group overflow-hidden"
+                    onMouseEnter={(e) => {
+                      if (course.glowColor) {
+                        e.currentTarget.style.borderColor = `${course.glowColor}50`;
+                        e.currentTarget.style.boxShadow = `0 10px 30px -10px ${course.glowColor}30, 0 0 15px -3px ${course.glowColor}20`;
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = "";
+                      e.currentTarget.style.boxShadow = "";
+                    }}
                   >
-                    <div className="flex items-start gap-3 mb-2">
+                    {/* Hover background gradient */}
+                    {course.glowColor && (
+                      <div
+                        className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        style={{
+                          background: `radial-gradient(circle at top right, ${course.glowColor}15 0%, transparent 70%)`
+                        }}
+                      />
+                    )}
+
+                    <div className="flex items-start gap-3 mb-2 relative z-10">
                       {course.image ? (
                         <div className="size-10 rounded-lg overflow-hidden border border-white/10 bg-white/5 shrink-0">
                           <img src={course.image} alt={course.issuer} className="size-full object-cover" />
