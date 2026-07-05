@@ -61,7 +61,7 @@ export const projects: Project[] = [
     description: `Projeto de uma loja de roupas desenvolvido com foco em visual moderno e experiência do usuário, apresentando uma interface limpa e estilizada.`,
     image: imgWall,
     tags: ["HTML5", "CSS3", "JavaScript"],
-    themeColor: "#8b5cf6",
+    themeColor: "#eab308",
     github: "https://github.com/wallace-2105/wall-saventy",
     demo: "https://wallace-2105.github.io/wall-saventy/",
     features: [
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     description: `Site institucional desenvolvido para uma clínica de ortopedia, pensado para funcionar perfeitamente tanto em computadores quanto em dispositivos móveis.`,
     image: imgBrait,
     tags: ["HTML5", "CSS3"],
-    themeColor: "#06b6d4",
+    themeColor: "#10b981",
     github: "https://github.com/wallace-2105/clinica-eliane-brait",
     demo: "https://wallace-2105.github.io/clinica-eliane-brait/",
     features: [
@@ -91,7 +91,7 @@ export const projects: Project[] = [
     description: `Sistema desenvolvido para análise de notícias e verificação de possíveis fake news através do processamento de textos e links enviados pelos usuários.`,
     image: imgNoticia,
     tags: ["HTML5", "CSS3", "JavaScript", "Node.js", "MongoDB"],
-    themeColor: "#10b981",
+    themeColor: "#f97316",
     github: "https://github.com/wallace-2105/verifica-noticia",
     demo: "https://github.com/wallace-2105/verifica-noticia",
     features: [
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     description: `Aplicativo mobile voltado para segurança feminina, permitindo compartilhamento de localização em tempo real com contatos de confiança e acionamento rápido de SOS em situações de emergência.`,
     image: imgHersafe,
     tags: ["TypeScript", "React Native", "JavaScript", "Node.js", "CSS3", "MongoDB"],
-    themeColor: "#f43f5e",
+    themeColor: "#8b5cf6",
     github: "https://github.com/wallace-2105/hersafe",
     demo: "https://github.com/wallace-2105/hersafe",
     features: [
