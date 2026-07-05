@@ -218,6 +218,28 @@ export function Certifications() {
                         ))}
                       </div>
                     )}
+                    
+                    {/* Course Certificate Button with LED border effect */}
+                    {course.url && (
+                      <div className="mt-4 flex justify-center relative z-20">
+                        <a
+                          href={course.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="relative inline-flex h-8 w-full overflow-hidden rounded-md p-[1.5px] focus:outline-none hover:scale-[1.02] transition-transform active:scale-95"
+                        >
+                          <span
+                            className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite]"
+                            style={{
+                              background: `conic-gradient(from 90deg at 50% 50%, transparent 0%, ${course.glowColor || "#ffffff"} 50%, transparent 100%)`,
+                            }}
+                          />
+                          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-[4.5px] bg-card px-3 py-1 text-xs font-semibold text-foreground backdrop-blur-3xl transition-colors hover:bg-card/90">
+                            Certificado
+                          </span>
+                        </a>
+                      </div>
+                    )}
                   </motion.div>
                 ))}
               </div>
