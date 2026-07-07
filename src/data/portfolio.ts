@@ -269,6 +269,7 @@ export const tools: Tool[] = [
   { name: "Microsoft Excel", category: "Produtividade", color: "#217346" },
   { name: "Microsoft PowerPoint", category: "Produtividade", color: "#D24726" },
   { name: "Microsoft Teams", category: "Comunicação", color: "#6264A7" },
+  { name: "Power BI", category: "Data", color: "#F2C811" },
 ];
 
 export const socials: SocialLink[] = [
