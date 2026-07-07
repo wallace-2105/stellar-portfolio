@@ -124,9 +124,9 @@ export const projects: Project[] = [
 ];
 
 export const aboutParagraphs = [
-  "Automação de processos e desenvolvimento de soluções que realmente facilitam o dia a dia. Atualmente curso Análise e Desenvolvimento de Sistemas e venho construindo minha experiência unindo operações, tecnologia e desenvolvimento de software.",
-  "Minha trajetória começou em ambientes operacionais e industriais, passando por atendimento, logística, produção e suporte técnico, até chegar na área de tecnologia trabalhando diretamente com hardware, IoT e dispositivos de rastreamento. Essa mistura de experiências me trouxe uma visão muito prática sobre resolução de problemas, organização de processos e tecnologia aplicada no mundo real.",
-  "Hoje meu foco está em desenvolvimento web, automação, sistemas inteligentes e soluções modernas voltadas para produtividade, segurança e integração tecnológica. Gosto de criar projetos completos, explorar novas ferramentas e transformar ideias em aplicações funcionais.",
+  "Sou estudante de Análise e Desenvolvimento de Sistemas e alguém que acredita no poder da tecnologia para simplificar desafios e criar novas oportunidades.",
+  "Minha trajetória foi construída através da busca constante por aprendizado, evolução e novos conhecimentos. Gosto de explorar ideias, desenvolver projetos e enfrentar desafios que me permitam crescer tanto profissionalmente quanto pessoalmente.",
+  "Mais do que escrever código, meu objetivo é criar soluções úteis, funcionais e que gerem valor para as pessoas. Estou sempre em busca de novas experiências, tecnologias e oportunidades que contribuam para minha evolução na área de desenvolvimento de software."
 ];
 
 export const techStack: TechItem[] = [
@@ -181,6 +181,7 @@ export const education: Education[] = [
     title: "Eletricista Predial de Baixa Tensão",
     institution: "Obra Social Dom Bosco",
     period: "2015 — 2016",
+    type: "Técnico",
     description: "Capacitação prática em instalações elétricas, interpretação de diagramas, manutenção preventiva e corretiva, com foco em segurança e qualidade dos serviços.",
     logo: obrasocialLogo,
   },
