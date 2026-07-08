@@ -15,6 +15,7 @@ import imgPowerpoint from "@/assets/powerpoint.png";
 import imgVscode from "@/assets/vscode.png";
 import imgWord from "@/assets/word.png";
 import imgTeams from "@/assets/teams.png";
+import imgCloudflare from "@/assets/cloudflare.png";
 
 // ─── Official SVG Logos for all tools ────────────────────────────────────────
 const TOOL_LOGOS: Record<string, React.ReactNode> = {
@@ -162,6 +163,7 @@ const TOOL_LOGOS: Record<string, React.ReactNode> = {
   Codex: <img src={imgCodex} alt="Codex" className="w-full h-full object-contain" />,
   "Aceternity UI": <img src={imgAceternity} alt="Aceternity UI" className="w-full h-full object-contain" />,
   "Power BI": <img src={imgPowerbi} alt="Power BI" className="w-full h-full object-contain" />,
+  Cloudflare: <img src={imgCloudflare} alt="Cloudflare" className="w-full h-full object-contain" />,
 };
 
 // ─── Premium Tool Card Component ─────────────────────────────────────────────

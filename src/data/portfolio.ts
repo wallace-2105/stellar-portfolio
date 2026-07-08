@@ -271,6 +271,7 @@ export const tools: Tool[] = [
   { name: "Microsoft PowerPoint", category: "Intermediário", color: "#D24726" },
   { name: "Microsoft Teams", category: "Avançado", color: "#6264A7" },
   { name: "Power BI", category: "Intermediário", color: "#F2C811" },
+  { name: "Cloudflare", category: "Intermediário", color: "#F38020" },
 ];
 
 export const socials: SocialLink[] = [
