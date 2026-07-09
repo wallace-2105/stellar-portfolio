@@ -248,7 +248,6 @@ export function Certifications() {
                           target="_blank"
                           rel="noreferrer"
                           className="relative inline-flex h-8 w-full overflow-hidden rounded-md p-[1.5px] focus:outline-none hover:scale-[1.02] transition-transform active:scale-95"
-                          style={{ backgroundColor: course.glowColor || "#CC092F" }}
                         >
                           <span
                             className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite]"
