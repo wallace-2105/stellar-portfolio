@@ -23,7 +23,7 @@ import ifrsLogo from "@/assets/rio.png";
 
 export const personal = {
   name: "Wallace Coimbra",
-  role: "Desenvolvedor Full Stack Sênior",
+  role: "Desenvolvedor Full Stack",
   initials: "WC",
   tagline: "Construindo o futuro digital com precisão.",
   description:
@@ -153,14 +153,14 @@ export const experiences: Experience[] = [
     description: `Atuação na área operacional e técnica, realizando suporte em dispositivos IoT, configuração de rastreadores, logística tecnológica e preparação de equipamentos para clientes.\n\nPrincipais atividades:\n• Configuração e preparação de dispositivos de rastreamento e equipamentos IoT.\n• Atualização e instalação de firmwares em diferentes aparelhos.\n• Configuração de chips 4G multioperadora, incluindo operadoras como Algar.\n• Testes funcionais e validação de equipamentos antes do envio.\n• Emissão de notas fiscais para logística e expedição.\n• Organização e controle logístico de dispositivos e materiais.\n• Separação, embalagem e envio de equipamentos para clientes.\n• Suporte técnico operacional em diferentes modelos de rastreadores.\n• Configuração de diversos dispositivos com necessidades específicas.\n• Apoio aos processos internos de operações e tecnologia.\n\nTecnologias e conhecimentos utilizados:\nHardware e dispositivos IoT, Configuração de rastreadores, Firmware e atualização de dispositivos, Redes móveis e chips 4G, Logística operacional, Emissão de notas fiscais, Suporte técnico, Controle e organização de equipamentos.\n\nCompetências desenvolvidas:\nSuporte técnico em hardware, Operações e logística, IoT e rastreamento, Configuração de dispositivos, Organização operacional, Resolução de problemas, Atenção técnica e analítica.`,
   },
   {
-    role: "Operador de Máquina / Conferente",
+    role: "Operador de Máquina | Conferente",
     company: "Gold Pan",
     period: "2021 — 2025",
     shortDescription: "Atuação em indústria de panificação, operando máquinas industriais, controlando a produção, conferindo produtos e dando suporte logístico interno.",
     description: `Atuação em indústria de panificação, trabalhando diretamente na operação de máquinas industriais, controle de produção, conferência de produtos e suporte logístico interno da fábrica.\n\nPrincipais atividades:\n• Operação de diversas máquinas industriais da linha de produção.\n• Monitoramento de processos produtivos e controle operacional.\n• Conferência de produtos, materiais e pedidos.\n• Atuação em câmara fria e ambientes de armazenamento refrigerado.\n• Organização do setor produtivo e apoio na logística interna.\n• Controle de qualidade e acompanhamento da produção.\n• Separação e movimentação de materiais e mercadorias.\n• Apoio às demandas gerais da fábrica e da produção.\n\nCompetências desenvolvidas:\nOperação de máquinas industriais, Controle de produção, Conferência e logística, Trabalho em ambiente industrial, Organização e atenção aos detalhes, Adaptabilidade operacional, Trabalho em equipe.`,
   },
   {
-    role: "Atendente de Restaurante / Auxiliar de Recebimento",
+    role: "Atendente de Restaurante | Auxiliar de Recebimento",
     company: "McDonald's",
     period: "2019 — 2021",
     shortDescription: "Atuação multifuncional no ambiente operacional do restaurante, focando em atendimento ao público, organização, agilidade e trabalho em equipe em um ambiente de alta demanda.",
