@@ -277,6 +277,6 @@ export const tools: Tool[] = [
 export const socials: SocialLink[] = [
   { label: "GitHub", href: "https://github.com/wallace-2105", icon: "Github" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/wallace-coimbra2105/", icon: "Linkedin" },
-  { label: "Twitter", href: "https://twitter.com", icon: "Twitter" },
+  { label: "Instagram", href: "https://www.instagram.com/wall_70_/", icon: "Instagram" },
   { label: "Email", href: "https://mail.google.com/mail/?view=cm&to=wallace.wcs83@gmail.com", icon: "Mail" },
 ];

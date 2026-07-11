@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
-import { Github, Linkedin, Twitter } from "@/components/icons";
+import { Github, Linkedin, Instagram } from "@/components/icons";
 import { personal, socials } from "@/data/portfolio";
 
-const iconMap = { Github, Linkedin, Twitter, Mail };
+const iconMap = { Github, Linkedin, Instagram, Mail };
 
 /* ── WhatsApp SVG Icon ── */
 function WhatsAppIcon({ className }: { className?: string }) {
