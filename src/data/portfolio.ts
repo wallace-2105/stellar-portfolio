@@ -30,7 +30,7 @@ export const personal = {
     "Especialista em arquiteturas escaláveis e experiências de usuário de alto nível. Foco em transformar problemas complexos em soluções elegantes e performáticas.",
   email: "wallace.wcs83@gmail.com",
   location: "São Paulo, Brasil",
-  cvUrl: "/cv.pdf",
+  cvUrl: "/Curriculo_Wallace_Coimbra.pdf",
 };
 
 export const navLinks: NavLink[] = [
