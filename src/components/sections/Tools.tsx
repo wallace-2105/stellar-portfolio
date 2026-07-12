@@ -176,8 +176,16 @@ function ToolCard({ tool, index }: { tool: typeof tools[number]; index: number }
   const floatDelay = useMemo(() => (index * 0.3) % floatDuration, [index, floatDuration]);
   const glowDuration = useMemo(() => 5 + (index % 4) * 0.7, [index]);
 
-  // For GitHub in dark mode, use white as the visible color
-  const visibleColor = tool.name === "GitHub" ? "#8b949e" : brandColor;
+  // For very dark brand colors, use a lighter shade so the hover is visible in dark mode
+  const isDarkColor = (hex: string) => {
+    const c = hex.replace("#", "");
+    const r = parseInt(c.substring(0, 2), 16);
+    const g = parseInt(c.substring(2, 4), 16);
+    const b = parseInt(c.substring(4, 6), 16);
+    // Luminance threshold — anything below ~40 is too dark to see on dark backgrounds
+    return (r * 299 + g * 587 + b * 114) / 1000 < 40;
+  };
+  const visibleColor = isDarkColor(brandColor) ? "#8b949e" : brandColor;
 
   return (
     <motion.div
