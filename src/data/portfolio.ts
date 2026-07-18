@@ -14,6 +14,7 @@ import imgWall from "@/assets/walls.jpg.png";
 import imgBrait from "@/assets/clinica.jpg.png";
 import imgNoticia from "@/assets/noticia.jpg.jpeg";
 import imgHersafe from "@/assets/hersafe.png";
+import imgDama from "@/assets/dama.png";
 import cruzeirodosulLogo from "@/assets/logo-cruzeiro-do-sul-estrela.png";
 import obrasocialLogo from "@/assets/obrasocial.png";
 import bradescoLogo from "@/assets/bradesco.jpg";
@@ -117,6 +118,23 @@ export const projects: Project[] = [
       "Sistema inspirado em rastreamento familiar",
       "Estrutura mobile moderna",
       "Integração entre aplicativo e backend",
+    ],
+  },
+  {
+    title: "Dama — Python Edition",
+    description: `Jogo de Damas (Checkers) clássico reconstruído do zero com Python e Pygame. Dois jogadores, captura obrigatória, sistema de Dama com coroa — tudo feito com lógica pura, sem frameworks prontos.`,
+    image: imgDama,
+    tags: ["Python", "Pygame"],
+    themeColor: "#e74c3c",
+    github: "https://github.com/wallace-2105/dama-python",
+    demo: "https://github.com/wallace-2105/dama-python",
+    features: [
+      "Tabuleiro 8x8 com renderização gráfica via Pygame",
+      "Sistema de captura obrigatória e captura múltipla",
+      "Peça vira Dama ao alcançar a última linha",
+      "Reinício rápido com tecla R",
+      "Jogo local para dois jogadores",
+      "100% Python — sem engine externa",
     ],
   },
 ];
