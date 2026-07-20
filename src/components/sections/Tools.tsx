@@ -16,6 +16,7 @@ import imgVscode from "@/assets/vscode.png";
 import imgWord from "@/assets/word.png";
 import imgTeams from "@/assets/teams.png";
 import imgCloudflare from "@/assets/cloudflare.png";
+import imgVercel from "@/assets/Vercel.png";
 
 // ─── Official SVG Logos for all tools ────────────────────────────────────────
 const TOOL_LOGOS: Record<string, React.ReactNode> = {
@@ -164,6 +165,7 @@ const TOOL_LOGOS: Record<string, React.ReactNode> = {
   "Aceternity UI": <img src={imgAceternity} alt="Aceternity UI" className="w-full h-full object-contain" />,
   "Power BI": <img src={imgPowerbi} alt="Power BI" className="w-full h-full object-contain" />,
   Cloudflare: <img src={imgCloudflare} alt="Cloudflare" className="w-full h-full object-contain" />,
+  Vercel: <img src={imgVercel} alt="Vercel" className="w-full h-full object-contain" />,
 };
 
 // ─── Premium Tool Card Component ─────────────────────────────────────────────

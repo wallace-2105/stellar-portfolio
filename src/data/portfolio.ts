@@ -151,6 +151,7 @@ export const techStack: TechItem[] = [
   { name: "Node.js", abbr: "ND", category: "Backend" },
   { name: "Java", abbr: "JV", category: "Linguagem" },
   { name: "Python", abbr: "PY", category: "Linguagem" },
+  { name: "PHP", abbr: "PH", category: "Linguagem" },
   { name: "MongoDB", abbr: "MG", category: "Banco" },
   { name: "TypeScript", abbr: "TS", category: "Linguagem" },
   { name: "Tailwind CSS", abbr: "TW", category: "Estilização" },
@@ -288,6 +289,7 @@ export const tools: Tool[] = [
   { name: "Microsoft Teams", category: "Avançado", color: "#6264A7" },
   { name: "Power BI", category: "Intermediário", color: "#F2C811" },
   { name: "Cloudflare", category: "Intermediário", color: "#F38020" },
+  { name: "Vercel", category: "Intermediário", color: "#000000" },
 ];
 
 export const socials: SocialLink[] = [
