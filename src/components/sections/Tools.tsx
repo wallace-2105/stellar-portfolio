@@ -16,7 +16,7 @@ import imgVscode from "@/assets/vscode.png";
 import imgWord from "@/assets/word.png";
 import imgTeams from "@/assets/teams.png";
 import imgCloudflare from "@/assets/cloudflare.png";
-import imgVercel from "@/assets/Vercel.png";
+import imgVercel from "@/assets/vercel nova.webp";
 
 // ─── Official SVG Logos for all tools ────────────────────────────────────────
 const TOOL_LOGOS: Record<string, React.ReactNode> = {
