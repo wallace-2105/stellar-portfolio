@@ -125,7 +125,7 @@ export const projects: Project[] = [
     description: `Jogo de Damas (Checkers) clássico reconstruído do zero com Python e Pygame, com visual futurista/espacial. Dois jogadores, captura obrigatória, sistema de Dama com coroa — tudo feito com lógica pura, sem frameworks prontos. O projeto também conta com um placar web desenvolvido em PHP, que recebe os resultados das partidas automaticamente e exibe um histórico completo, mostrando a comunicação entre backend e frontend.`,
     image: imgDama,
     tags: ["Python", "Pygame", "PHP"],
-    themeColor: "#d4a76a",
+    themeColor: "#FF00FF",
     github: "https://github.com/wallace-2105/dama-python",
     demo: "https://github.com/wallace-2105/dama-python",
     features: [
