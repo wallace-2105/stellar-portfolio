@@ -123,6 +123,23 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: "Lume Couture Boutique",
+    description: `E-commerce premium de moda feminina desenvolvido com React, TypeScript, Tailwind CSS e Vite. Foco em design sofisticado, micro-animações com Framer Motion, arquitetura componentizada e experiência de usuário de alto nível. Pronto para integração com backend, autenticação e pagamentos.`,
+    image: "https://github.com/user-attachments/assets/a0671424-e3d7-4cf0-87d5-a3d336b22c93",
+    tags: ["TypeScript", "React", "Tailwind CSS", "JavaScript"],
+    themeColor: "#c084fc",
+    github: "https://github.com/wallace-2105/lume-couture-boutique",
+    demo: "https://github.com/wallace-2105/lume-couture-boutique",
+    features: [
+      "Catálogo de produtos com hover effects premium",
+      "Carrinho com drawer lateral — adicionar, remover e ajustar quantidades",
+      "Checkout via WhatsApp com resumo automático do pedido",
+      "Layout 100% responsivo (desktop, tablet e mobile)",
+      "FAQ, newsletter, avaliações de clientes e tela de loading animada",
+      "Integração de pagamentos (PIX, crédito em até 12x)",
+    ],
+  },
+  {
     title: "Site Marques Makers 3D",
     description: `Loja virtual desenvolvida para apresentação e divulgação de produtos produzidos em impressão 3D. O projeto foi criado com foco em design moderno, navegação simples e responsividade.`,
     image: imgMarques3D,

@@ -60,6 +60,19 @@ const TECH_ICONS: Record<string, { icon: React.ReactNode; color: string }> = {
     ),
     color: "#61DAFB",
   },
+  React: {
+    icon: (
+      <svg className="size-4" viewBox="-11.5 -10.232 23 20.463" xmlns="http://www.w3.org/2000/svg">
+        <circle r="2.05" fill="#61DAFB" />
+        <g stroke="#61DAFB" strokeWidth="1" fill="none">
+          <ellipse rx="11" ry="4.2" />
+          <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+          <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+        </g>
+      </svg>
+    ),
+    color: "#61DAFB",
+  },
   "Node.js": {
     icon: (
       <svg className="size-4" viewBox="0 0 256 282" xmlns="http://www.w3.org/2000/svg">
@@ -115,6 +128,14 @@ const TECH_ICONS: Record<string, { icon: React.ReactNode; color: string }> = {
       </svg>
     ),
     color: "#777BB4",
+  },
+  "Tailwind CSS": {
+    icon: (
+      <svg className="size-4" viewBox="0 0 256 154" xmlns="http://www.w3.org/2000/svg">
+        <path d="M128 0C93.8 0 72.5 17.1 64 51.2c12.8-17.1 27.7-23.5 44.8-19.2 9.8 2.5 16.7 9.5 24.5 17.5C146 62.3 160.5 77 192 77c34.2 0 55.5-17.1 64-51.2-12.8 17.1-27.7 23.5-44.8 19.2-9.8-2.5-16.7-9.5-24.5-17.5C174 14.7 159.5 0 128 0zM64 77C29.8 77 8.5 94.1 0 128.2c12.8-17.1 27.7-23.5 44.8-19.2 9.8 2.5 16.7 9.5 24.5 17.5C82 139.3 96.5 154 128 154c34.2 0 55.5-17.1 64-51.2-12.8 17.1-27.7 23.5-44.8 19.2-9.8-2.5-16.7-9.5-24.5-17.5C110 91.7 95.5 77 64 77z" fill="#06B6D4" />
+      </svg>
+    ),
+    color: "#06B6D4",
   },
 };
 
@@ -395,7 +416,14 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   );
 }
 
+const INITIAL_COUNT = 6;
+
 export function Projects() {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleProjects = showAll ? projects : projects.slice(0, INITIAL_COUNT);
+  const hasMore = projects.length > INITIAL_COUNT;
+
   return (
     <section id="projects" className="py-24 px-6 bg-surface">
       <div className="max-w-7xl mx-auto">
@@ -406,10 +434,52 @@ export function Projects() {
         />
 
         <div className="grid md:grid-cols-3 gap-10 lg:gap-12">
-          {projects.map((project, i) => (
+          {visibleProjects.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />
           ))}
         </div>
+
+        {/* Load More / Show Less Button */}
+        {hasMore && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="mt-14 flex justify-center"
+          >
+            <button
+              onClick={() => setShowAll((prev) => !prev)}
+              className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm text-sm font-semibold text-foreground/80 hover:text-foreground transition-all duration-300 cursor-pointer overflow-hidden"
+              style={{}}
+            >
+              {/* Shimmer effect on hover */}
+              <span className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
+
+              {/* Left decorative line */}
+              <span className="hidden sm:block w-12 h-px bg-gradient-to-r from-transparent to-border/60 group-hover:to-primary/40 transition-colors duration-300" />
+
+              <span className="flex items-center gap-2">
+                {showAll ? (
+                  <>
+                    <ChevronUp className="size-4 transition-transform duration-300" />
+                    Mostrar Menos
+                  </>
+                ) : (
+                  <>
+                    <ChevronDown className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+                    Carregar Mais Projetos
+                    <span className="inline-flex items-center justify-center size-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">
+                      +{projects.length - INITIAL_COUNT}
+                    </span>
+                  </>
+                )}
+              </span>
+
+              {/* Right decorative line */}
+              <span className="hidden sm:block w-12 h-px bg-gradient-to-l from-transparent to-border/60 group-hover:to-primary/40 transition-colors duration-300" />
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
