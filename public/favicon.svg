@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Dark background circle -->
+  <rect width="64" height="64" rx="14" fill="#0f0f0f"/>
+  <!-- WC text - matching the Navbar font-display bold style -->
+  <text
+    x="32"
+    y="43"
+    font-family="Outfit, Inter, sans-serif"
+    font-weight="700"
+    font-size="26"
+    text-anchor="middle"
+    fill="#f5f5f5"
+    letter-spacing="-1"
+  >WC</text>
+  <!-- The accent dot matching text-primary-light (blue accent) -->
+  <circle cx="52" cy="43" r="3" fill="#6ea8fe"/>
+</svg>
