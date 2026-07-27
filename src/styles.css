@@ -62,8 +62,10 @@
 :root {
   --radius: 0.625rem;
 
-  --background: oklch(1 0 0);          /* soft off-white */
-  --foreground: oklch(0.145 0 0);            /* deep slate, not pure black */
+  --background: oklch(1 0 0);
+  /* soft off-white */
+  --foreground: oklch(0.145 0 0);
+  /* deep slate, not pure black */
   --surface: oklch(0.97 0.003 250);
   --surface-elevated: oklch(1 0 0);
 
@@ -72,9 +74,11 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
 
-  --primary: oklch(0.205 0 0);               /* deep navy */
+  --primary: oklch(0.205 0 0);
+  /* deep navy */
   --primary-foreground: oklch(0.985 0 0);
-  --primary-light: oklch(0.55 0.18 258);         /* bright accent blue */
+  --primary-light: oklch(0.55 0.18 258);
+  /* bright accent blue */
 
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -104,7 +108,8 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);           /* deep slate, not pure black */
+  --background: oklch(0.145 0 0);
+  /* deep slate, not pure black */
   --foreground: oklch(0.985 0 0);
   --surface: oklch(0.2 0.018 252);
   --surface-elevated: oklch(0.23 0.02 252);
@@ -114,7 +119,8 @@
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
 
-  --primary: oklch(0.922 0 0);               /* lighter navy/blue for dark */
+  --primary: oklch(0.922 0 0);
+  /* lighter navy/blue for dark */
   --primary-foreground: oklch(0.205 0 0);
   --primary-light: oklch(0.78 0.15 255);
 
@@ -176,15 +182,18 @@
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
+
   .text-gradient-brand {
     background-image: linear-gradient(135deg, var(--primary), var(--primary-light));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
+
   .shadow-elegant {
     box-shadow: var(--shadow-elegant);
   }
+
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }

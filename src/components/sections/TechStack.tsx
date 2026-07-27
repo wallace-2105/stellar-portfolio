@@ -3,7 +3,7 @@ import { techStack } from "@/data/portfolio";
 import { SectionHeading } from "@/components/SectionHeading";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import imgPhp from "@/assets/php.png";
+
 
 
 // ─── Tech colour map for glow effects ───────────────────────────────────────
@@ -133,7 +133,18 @@ const TECH_LOGOS: Record<string, React.ReactNode> = {
       </g>
     </svg>
   ),
-  PHP: <img src={imgPhp} alt="PHP" className="w-full h-full object-contain" />,
+  PHP: (
+    <svg className="w-full h-full" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="phpGrad" cx="50%" cy="45%" r="55%">
+          <stop offset="0%" stopColor="#b0b3d6" />
+          <stop offset="100%" stopColor="#6e7394" />
+        </radialGradient>
+      </defs>
+      <ellipse cx="50" cy="25" rx="50" ry="25" fill="url(#phpGrad)" />
+      <text x="50" y="33" fontFamily="DejaVu Sans, Arial, sans-serif" fontWeight="bold" fontStyle="italic" fontSize="24" fill="#23253a" textAnchor="middle">php</text>
+    </svg>
+  ),
   "C#": (
     <svg className="w-full h-full" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
       <path d="M117.5 33.9L68.9 6c-1.5-.9-3.2-1.3-4.9-1.3s-3.4.4-4.9 1.3L10.5 33.9C7.6 35.6 5.8 38.7 5.8 42v55.9c0 3.3 1.8 6.4 4.7 8.1l48.6 28c1.5.9 3.2 1.3 4.9 1.3 1.7 0 3.4-.4 4.9-1.3l48.6-28c2.9-1.7 4.7-4.8 4.7-8.1V42c0-3.3-1.8-6.4-4.7-8.1z" fill="#9B4F96"/>
