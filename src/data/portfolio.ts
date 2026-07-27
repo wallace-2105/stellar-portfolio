@@ -127,7 +127,7 @@ export const projects: Project[] = [
     description: `E-commerce premium de moda feminina desenvolvido com React, TypeScript, Tailwind CSS e Vite. Foco em design sofisticado, micro-animações com Framer Motion, arquitetura componentizada e experiência de usuário de alto nível. Pronto para integração com backend, autenticação e pagamentos.`,
     image: "https://github.com/user-attachments/assets/a0671424-e3d7-4cf0-87d5-a3d336b22c93",
     tags: ["TypeScript", "React", "Tailwind CSS", "JavaScript"],
-    themeColor: "#c084fc",
+    themeColor: "#8B1A4A",
     github: "https://github.com/wallace-2105/lume-couture-boutique",
     demo: "https://github.com/wallace-2105/lume-couture-boutique",
     features: [
