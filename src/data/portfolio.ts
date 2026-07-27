@@ -153,6 +153,7 @@ export const techStack: TechItem[] = [
   { name: "Java", abbr: "JV", category: "Linguagem" },
   { name: "Python", abbr: "PY", category: "Linguagem" },
   { name: "PHP", abbr: "PH", category: "Linguagem" },
+  { name: "C#", abbr: "C#", category: "Linguagem" },
   { name: "MongoDB", abbr: "MG", category: "Banco" },
   { name: "TypeScript", abbr: "TS", category: "Linguagem" },
   { name: "Tailwind CSS", abbr: "TW", category: "Estilização" },

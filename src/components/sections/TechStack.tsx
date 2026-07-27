@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import imgPhp from "@/assets/php.png";
+import imgCsharp from "@/assets/csharp.png";
 
 // ─── Tech colour map for glow effects ───────────────────────────────────────
 const TECH_COLORS: Record<string, string> = {
@@ -13,6 +14,7 @@ const TECH_COLORS: Record<string, string> = {
   Java:           "#ED8B00",
   Python:         "#3776AB",
   PHP:            "#777BB4",
+  "C#":           "#239120",
   MongoDB:        "#47A248",
   TypeScript:     "#3178C6",
   "Tailwind CSS": "#06B6D4",
@@ -132,6 +134,7 @@ const TECH_LOGOS: Record<string, React.ReactNode> = {
     </svg>
   ),
   PHP: <img src={imgPhp} alt="PHP" className="w-full h-full object-contain" />,
+  "C#": <img src={imgCsharp} alt="C#" className="w-full h-full object-contain" />,
 };
 
 // ─── Tech Card Grid Item with glow effect ────────────────────────────────────
