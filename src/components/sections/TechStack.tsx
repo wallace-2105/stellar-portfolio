@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import imgPhp from "@/assets/php.png";
-import imgCsharp from "@/assets/csharp.png";
+
 
 // ─── Tech colour map for glow effects ───────────────────────────────────────
 const TECH_COLORS: Record<string, string> = {
@@ -14,7 +14,7 @@ const TECH_COLORS: Record<string, string> = {
   Java:           "#ED8B00",
   Python:         "#3776AB",
   PHP:            "#777BB4",
-  "C#":           "#239120",
+  "C#":           "#9B4F96",
   MongoDB:        "#47A248",
   TypeScript:     "#3178C6",
   "Tailwind CSS": "#06B6D4",
@@ -134,7 +134,14 @@ const TECH_LOGOS: Record<string, React.ReactNode> = {
     </svg>
   ),
   PHP: <img src={imgPhp} alt="PHP" className="w-full h-full object-contain" />,
-  "C#": <img src={imgCsharp} alt="C#" className="w-full h-full object-contain" />,
+  "C#": (
+    <svg className="w-full h-full" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+      <path d="M117.5 33.9L68.9 6c-1.5-.9-3.2-1.3-4.9-1.3s-3.4.4-4.9 1.3L10.5 33.9C7.6 35.6 5.8 38.7 5.8 42v55.9c0 3.3 1.8 6.4 4.7 8.1l48.6 28c1.5.9 3.2 1.3 4.9 1.3 1.7 0 3.4-.4 4.9-1.3l48.6-28c2.9-1.7 4.7-4.8 4.7-8.1V42c0-3.3-1.8-6.4-4.7-8.1z" fill="#9B4F96"/>
+      <path d="M117.5 33.9L68.9 6c-1.5-.9-3.2-1.3-4.9-1.3V136c1.7 0 3.4-.4 4.9-1.3l48.6-28c2.9-1.7 4.7-4.8 4.7-8.1V42c0-3.3-1.8-6.4-4.7-8.1z" fill="#68217A"/>
+      <path d="M88.9 81.2c-3.2 5.5-9.1 9.2-15.9 9.2-10.1 0-18.2-8.2-18.2-18.2s8.2-18.2 18.2-18.2c6.8 0 12.7 3.7 15.9 9.2l13.3-7.7C97 45.4 86.2 39 73.8 39c-19.9 0-36 16.1-36 36s16.1 36 36 36c12.4 0 23.2-6.4 29.4-16.2l-14.3-13.6z" fill="#fff"/>
+      <path d="M96 62h-3v-3h-4v3h-3v4h3v3h4v-3h3zM109 62h-3v-3h-4v3h-3v4h3v3h4v-3h3z" fill="#fff"/>
+    </svg>
+  ),
 };
 
 // ─── Tech Card Grid Item with glow effect ────────────────────────────────────
