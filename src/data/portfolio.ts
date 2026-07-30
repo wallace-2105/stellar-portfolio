@@ -129,7 +129,7 @@ export const projects: Project[] = [
     tags: ["TypeScript", "React", "Tailwind CSS", "JavaScript"],
     themeColor: "#8B1A4A",
     github: "https://github.com/wallace-2105/lume-couture-boutique",
-    demo: "https://github.com/wallace-2105/lume-couture-boutique",
+    demo: "https://lume-store.wallace-wcs83.workers.dev/",
     features: [
       "Catálogo de produtos com hover effects premium",
       "Carrinho com drawer lateral — adicionar, remover e ajustar quantidades",
