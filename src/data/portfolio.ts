@@ -77,7 +77,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Sparkle Cash Craft",
+    title: "Controle Financeiro",
     description: `Sistema de controle financeiro pessoal completo, criado para gerenciar receitas e despesas, acompanhar categorias e visualizar a saúde financeira mês a mês em um dashboard com gráficos.`,
     image: "https://github.com/user-attachments/assets/5e5560c6-f50f-486b-b37c-ceca9f9074d3",
     tags: ["React", "TypeScript", "Tailwind CSS", "C#", "SQLite"],
