@@ -253,7 +253,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                     className="size-3.5 mt-0.5 shrink-0"
                     style={{ color: project.themeColor }}
                   />
-                  <span className="line-clamp-1">{feat}</span>
+                  <span className="line-clamp-2 leading-snug">{feat}</span>
                 </li>
               ))}
             </ul>
