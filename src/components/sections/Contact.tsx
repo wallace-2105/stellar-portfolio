@@ -91,6 +91,13 @@ export function Contact() {
           <div className="flex flex-wrap justify-center gap-3 mt-10">
             {socials.map((s) => {
               const Icon = iconMap[s.icon as keyof typeof iconMap] ?? Mail;
+              
+              let hoverColorClass = "hover:bg-primary-foreground/10";
+              if (s.label === "GitHub") hoverColorClass = "hover:bg-[#181717] hover:border-[#181717] hover:text-white";
+              if (s.label === "LinkedIn") hoverColorClass = "hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:text-white";
+              if (s.label === "Instagram") hoverColorClass = "hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:border-transparent hover:text-white";
+              if (s.label === "Email") hoverColorClass = "hover:bg-[#EA4335] hover:border-[#EA4335] hover:text-white";
+
               return (
                 <a
                   key={s.label}
@@ -98,17 +105,13 @@ export function Contact() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={s.label}
-                  className="size-11 rounded-full border border-primary-foreground/20 grid place-items-center hover:bg-primary-foreground/10 transition-colors"
+                  className={`size-11 rounded-full border border-primary-foreground/20 grid place-items-center transition-all duration-300 ${hoverColorClass}`}
                 >
                   <Icon className="size-4" />
                 </a>
               );
             })}
           </div>
-
-          <p className="text-primary-foreground/60 text-sm mt-8">
-            {personal.email} · {personal.location}
-          </p>
         </motion.div>
       </div>
     </section>
