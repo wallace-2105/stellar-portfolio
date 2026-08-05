@@ -91,7 +91,7 @@ export function Contact() {
           <div className="flex flex-wrap justify-center gap-3 mt-10">
             {socials.map((s) => {
               const Icon = iconMap[s.icon as keyof typeof iconMap] ?? Mail;
-              
+
               let hoverColorClass = "hover:bg-primary-foreground/10";
               if (s.label === "GitHub") hoverColorClass = "hover:bg-[#181717] hover:border-[#181717] hover:text-white";
               if (s.label === "LinkedIn") hoverColorClass = "hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:text-white";
