@@ -325,6 +325,8 @@ export const tools: Tool[] = [
   { name: "Power BI", category: "Intermediário", color: "#F2C811" },
   { name: "Cloudflare", category: "Intermediário", color: "#F38020" },
   { name: "Vercel", category: "Intermediário", color: "#000000" },
+  { name: "Turso", category: "Avançado", color: "#4CF2D8" },
+  { name: "Render", category: "Intermediário", color: "#000000" },
 ];
 
 export const socials: SocialLink[] = [
