@@ -212,13 +212,13 @@ function ToolCard({ tool, index }: { tool: typeof tools[number]; index: number }
           hovered
             ? { type: "spring", stiffness: 300, damping: 20 }
             : {
-                y: {
-                  duration: floatDuration,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: floatDelay,
-                },
-              }
+              y: {
+                duration: floatDuration,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: floatDelay,
+              },
+            }
         }
         className="relative"
       >
