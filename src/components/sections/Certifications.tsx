@@ -71,16 +71,16 @@ export function Certifications() {
               {/* Institution logo */}
               <div className="flex items-start gap-4 mb-4">
                 {cert.image ? (
-                  <div className="size-12 rounded-lg overflow-hidden border border-white/10 bg-white shrink-0 p-1.5 flex items-center justify-center">
+                  <div className={`size-14 rounded-lg overflow-hidden shrink-0 flex items-center justify-center ${cert.issuer.includes('DIO') || cert.issuer.includes('Digital Innovation') ? 'bg-transparent' : 'border border-white/10 bg-white p-2'}`}>
                     <img
                       src={cert.image}
                       alt={cert.issuer}
-                      className="size-full object-contain"
+                      className={`size-full object-contain ${cert.issuer.includes('DIO') || cert.issuer.includes('Digital Innovation') ? 'scale-110 drop-shadow-lg' : ''}`}
                     />
                   </div>
                 ) : (
-                  <div className="size-10 rounded-lg bg-primary/10 grid place-items-center shrink-0">
-                    <Award className="size-5 text-primary" />
+                  <div className="size-14 rounded-lg bg-primary/10 grid place-items-center shrink-0">
+                    <Award className="size-6 text-primary" />
                   </div>
                 )}
                 <div className="min-w-0 pt-1">
@@ -213,15 +213,19 @@ export function Certifications() {
                     )}
 
                     <div className="flex items-start gap-3 mb-2 relative z-10">
-                      {course.image ? (
-                        <div className="size-10 rounded-lg overflow-hidden border border-white/10 bg-white/5 shrink-0">
-                          <img src={course.image} alt={course.issuer} className="size-full object-cover" />
-                        </div>
-                      ) : (
-                        <div className="size-9 rounded-lg bg-primary/10 grid place-items-center shrink-0">
-                          <Award className="size-4 text-primary" />
-                        </div>
-                      )}
+                          {course.image ? (
+                            <div className={`size-10 rounded-md overflow-hidden shrink-0 flex items-center justify-center ${course.issuer.includes('DIO') || course.issuer.includes('Digital Innovation') ? 'bg-transparent' : 'border border-white/10 bg-white p-1'}`}>
+                              <img
+                                src={course.image}
+                                alt={course.issuer}
+                                className={`size-full object-contain ${course.issuer.includes('DIO') || course.issuer.includes('Digital Innovation') ? 'scale-110 drop-shadow-md' : ''}`}
+                              />
+                            </div>
+                          ) : (
+                            <div className="size-10 rounded-md bg-primary/10 grid place-items-center shrink-0">
+                              <BookOpen className="size-4 text-primary" />
+                            </div>
+                          )}
                       <div>
                         <h4 className="font-semibold text-sm">{course.title}</h4>
                         <p className="text-xs text-muted-foreground">{course.issuer}</p>
