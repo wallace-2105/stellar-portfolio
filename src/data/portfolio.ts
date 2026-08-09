@@ -22,6 +22,8 @@ import bradescoLogo from "@/assets/bradesco.jpg";
 import awsLogo from "@/assets/aws.png";
 import senaiLogo from "@/assets/senai.png";
 import ifrsLogo from "@/assets/rio.png";
+import dioLogo from "@/assets/diologo.png";
+import awsLogoNova from "@/assets/awslogo.png";
 
 export const personal = {
   name: "Wallace Coimbra",
@@ -308,7 +310,7 @@ export const certificates: Certificate[] = [
     issuer: "DIO",
     year: "2026",
     type: "course",
-    image: awsLogo,
+    image: dioLogo,
     glowColor: "#FF9900",
     url: "/certificado- trabalhando com amazon bedrock.pdf",
     skills: ["Amazon BedRock", "AWS", "IA Generativa"],
@@ -318,17 +320,17 @@ export const certificates: Certificate[] = [
     issuer: "DIO",
     year: "2026",
     type: "course",
-    image: awsLogo,
+    image: dioLogo,
     glowColor: "#FF9900",
     url: "/certificado-aws step functions e bedrock.pdf",
     skills: ["AWS Step Functions", "Amazon BedRock", "Assistentes Virtuais"],
   },
   {
     title: "AWS - Agentes de IA em Campo",
-    issuer: "DIO",
+    issuer: "AWS",
     year: "2026",
     type: "course",
-    image: awsLogo,
+    image: awsLogoNova,
     glowColor: "#FF9900",
     url: "/certificado-AWS-agents de ia em campo.pdf",
     skills: ["AWS", "IA", "Agentes de IA"],
@@ -338,6 +340,7 @@ export const certificates: Certificate[] = [
     issuer: "DIO",
     year: "2026",
     type: "course",
+    image: dioLogo,
     glowColor: "#32A041",
     url: "/certificado-machine learning.pdf",
     skills: ["Machine Learning", "LLMs", "IA Generativa", "Agentes"],
