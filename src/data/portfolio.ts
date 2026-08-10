@@ -102,7 +102,7 @@ export const projects: Project[] = [
     tags: ["React", "TypeScript", "Node.js", "SQLite", "Turso", "Render"],
     themeColor: "#FF5722",
     github: "https://github.com/wallace-2105/chat-delivery-ai",
-    demo: "https://github.com/wallace-2105/chat-delivery-ai",
+    demo: "https://chat-delivery-ai.vercel.app",
     features: [
       "Chatbot Inteligente para atendimento em linguagem natural",
       "Dashboard em tempo real para acompanhamento de pedidos",
