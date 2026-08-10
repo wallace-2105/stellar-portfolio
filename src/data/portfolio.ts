@@ -24,6 +24,7 @@ import senaiLogo from "@/assets/senai.png";
 import ifrsLogo from "@/assets/rio.png";
 import dioLogo from "@/assets/diologo.png";
 import awsLogoNova from "@/assets/awslogo.png";
+import imgDelivery from "@/assets/delivery.png";
 
 export const personal = {
   name: "Wallace Coimbra",
@@ -95,17 +96,19 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Wall Seventy",
-    description: `Projeto de uma loja de roupas desenvolvido com foco em visual moderno e experiência do usuário, apresentando uma interface limpa e estilizada.`,
-    image: imgWall,
-    tags: ["HTML5", "CSS3", "JavaScript"],
-    themeColor: "#eab308",
-    github: "https://github.com/wallace-2105/wall-saventy",
-    demo: "https://wallace-2105.github.io/wall-saventy/",
+    title: "Delivery AI",
+    description: `Assistente Virtual para Delivery automatizando pedidos através de Inteligência Artificial usando linguagem natural. Inclui dashboard em tempo real, validação de produtos e montagem de carrinho. O sistema adota uma arquitetura desacoplada com Node.js e React e conta com projeção para integração com AWS e Bedrock.`,
+    image: imgDelivery,
+    tags: ["React", "TypeScript", "Node.js", "SQLite", "Turso", "Render"],
+    themeColor: "#FF5722",
+    github: "https://github.com/wallace-2105/chat-delivery-ai",
+    demo: "https://github.com/wallace-2105/chat-delivery-ai",
     features: [
-      "Carrinho de compras funcional",
-      "Catálogo filtrado por categoria",
-      "Design moderno e minimalista",
+      "Chatbot Inteligente para atendimento em linguagem natural",
+      "Dashboard em tempo real para acompanhamento de pedidos",
+      "Integração de NLP para interpretação de intenções",
+      "Arquitetura baseada em APIs REST escaláveis (pronta para AWS)",
+      "Sistema completo de carrinho (acúmulo e remoção de itens)",
     ],
   },
   {
@@ -171,6 +174,20 @@ export const projects: Project[] = [
       "Estrutura de loja virtual",
       "Layout responsivo",
       "Navegação simples e intuitiva",
+    ],
+  },
+  {
+    title: "Wall Seventy",
+    description: `Projeto de uma loja de roupas desenvolvido com foco em visual moderno e experiência do usuário, apresentando uma interface limpa e estilizada.`,
+    image: imgWall,
+    tags: ["HTML5", "CSS3", "JavaScript"],
+    themeColor: "#eab308",
+    github: "https://github.com/wallace-2105/wall-saventy",
+    demo: "https://wallace-2105.github.io/wall-saventy/",
+    features: [
+      "Carrinho de compras funcional",
+      "Catálogo filtrado por categoria",
+      "Design moderno e minimalista",
     ],
   }
 ];

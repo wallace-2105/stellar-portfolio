@@ -5,6 +5,8 @@ import { Github } from "@/components/icons";
 import { projects } from "@/data/portfolio";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { Project } from "@/types/portfolio";
+import tursoIcon from "@/assets/turso.png";
+import renderIcon from "@/assets/render.png";
 
 const TECH_ICONS: Record<string, { icon: React.ReactNode; color: string }> = {
   HTML5: {
@@ -163,6 +165,14 @@ const TECH_ICONS: Record<string, { icon: React.ReactNode; color: string }> = {
       </svg>
     ),
     color: "#0b7fcc",
+  },
+  Turso: {
+    icon: <img src={tursoIcon} alt="Turso" className="size-4 object-contain" />,
+    color: "#00E599",
+  },
+  Render: {
+    icon: <img src={renderIcon} alt="Render" className="size-4 object-contain" />,
+    color: "#46E3B7",
   },
 };
 
