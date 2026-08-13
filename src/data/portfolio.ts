@@ -362,6 +362,26 @@ export const certificates: Certificate[] = [
     url: "/certificado-machine learning.pdf",
     skills: ["Machine Learning", "LLMs", "IA Generativa", "Agentes"],
   },
+  {
+    title: "Agentes de IA e IBM Bob: Fundamentos para Desenvolvedores",
+    issuer: "DIO",
+    year: "2026",
+    type: "course",
+    image: dioLogo,
+    glowColor: "#32A041",
+    url: "/certificado-agentes de ia e ibm bob.pdf",
+    skills: ["IBM Bob", "Agentes de IA", "Inteligência Artificial"],
+  },
+  {
+    title: "Bot de Atendimento com Amazon Bedrock",
+    issuer: "DIO",
+    year: "2026",
+    type: "course",
+    image: dioLogo,
+    glowColor: "#32A041",
+    url: "/certificado-bot de atendimento com amazon  bedrock.pdf",
+    skills: ["Amazon Bedrock", "Assistentes Virtuais", "AWS"],
+  },
 ];
 
 export const tools: Tool[] = [
