@@ -189,6 +189,22 @@ export const projects: Project[] = [
       "Catálogo filtrado por categoria",
       "Design moderno e minimalista",
     ],
+  },
+  {
+    title: "Geo Explorer",
+    description: `Plataforma de aprendizado gamificada desenvolvida com tecnologias web modernas, projetada para engajar desenvolvedores através de trilhas de aprendizado, desafios interativos e certificações automatizadas. Avaliação baseada em Inteligência Artificial e End-to-End Type Safety.`,
+    image: "https://opengraph.githubassets.com/1/wallace-2105/Geo-Explorer",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Prisma"],
+    themeColor: "#2563eb",
+    github: "https://github.com/wallace-2105/Geo-Explorer",
+    demo: "https://geo-explorer-pi.vercel.app/",
+    features: [
+      "Trilhas de aprendizado interativas e gamificadas",
+      "Avaliação de código baseada em Inteligência Artificial",
+      "Sistema de certificações dinâmicas",
+      "Arquitetura limpa em Monorepo e End-to-End Type Safety",
+      "Integração completa entre Frontend e Backend"
+    ],
   }
 ];
 
