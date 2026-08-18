@@ -398,6 +398,16 @@ export const certificates: Certificate[] = [
     url: "/certificado-bot de atendimento com amazon  bedrock.pdf",
     skills: ["Amazon Bedrock", "Assistentes Virtuais", "AWS"],
   },
+  {
+    title: "IBM Bob em Produção: Governança, Métricas e Projeto Final",
+    issuer: "DIO",
+    year: "2026",
+    type: "course",
+    image: dioLogo,
+    glowColor: "#32A041",
+    url: "/certificado-IBM bob em produção.pdf",
+    skills: ["IBM Bob", "Governança", "Métricas", "Inteligência Artificial", "Agentes de IA"],
+  },
 ];
 
 export const tools: Tool[] = [
