@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <!-- Santander flame logo mark -->
+  <g>
+    <!-- Flame icon -->
+    <path d="M8 32 C8 32 6 24 10 18 C10 18 9 22 12 22 C12 22 10 18 14 14 C14 14 13 19 16 19 C16 19 14 15 18 10 C18 10 18 16 22 18 C22 18 20 14 22 10 C26 14 26 20 24 24 C24 24 26 22 26 24 C26 28 22 32 18 32 C14 32 8 32 8 32Z" fill="#EC0000"/>
+    <!-- Santander text -->
+    <text x="32" y="26" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#EC0000" letter-spacing="0.5">Santander</text>
+    <!-- Open Academy subtitle -->
+    <text x="32" y="36" font-family="Arial, sans-serif" font-size="7" fill="#EC0000" letter-spacing="0.3">Open Academy</text>
+  </g>
+</svg>
