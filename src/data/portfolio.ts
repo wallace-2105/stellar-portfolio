@@ -25,6 +25,7 @@ import ifrsLogo from "@/assets/rio.png";
 import dioLogo from "@/assets/diologo.png";
 import awsLogoNova from "@/assets/awslogo.png";
 import imgDelivery from "@/assets/delivery.png";
+import santanderLogo from "@/assets/santander.svg";
 
 export const personal = {
   name: "Wallace Coimbra",
@@ -407,6 +408,36 @@ export const certificates: Certificate[] = [
     glowColor: "#32A041",
     url: "/certificado-IBM bob em produção.pdf",
     skills: ["IBM Bob", "Governança", "Métricas", "Inteligência Artificial", "Agentes de IA"],
+  },
+  {
+    title: "Python",
+    issuer: "Santander Open Academy",
+    year: "2026",
+    type: "course",
+    image: santanderLogo,
+    glowColor: "#EC0000",
+    url: "/certificado-python.pdf",
+    skills: ["Python", "Lógica de Programação", "Programação"],
+  },
+  {
+    title: "Fundamentos de Segurança Cibernética",
+    issuer: "Santander Open Academy",
+    year: "2026",
+    type: "course",
+    image: santanderLogo,
+    glowColor: "#EC0000",
+    url: "/certificado-Fundamentos de segurança cibernética.pdf",
+    skills: ["Cibersegurança", "Segurança Digital", "IBM", "Fundamentos de Segurança"],
+  },
+  {
+    title: "English Fundamentals — Boost your job search and CV",
+    issuer: "Santander Open Academy",
+    year: "2026",
+    type: "course",
+    image: santanderLogo,
+    glowColor: "#EC0000",
+    url: "/certificado-English Fundamentals.pdf",
+    skills: ["Inglês", "English", "Job Search", "CV Writing", "Penn ELP"],
   },
 ];
 
