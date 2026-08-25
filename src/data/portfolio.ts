@@ -25,7 +25,7 @@ import ifrsLogo from "@/assets/rio.png";
 import dioLogo from "@/assets/diologo.png";
 import awsLogoNova from "@/assets/awslogo.png";
 import imgDelivery from "@/assets/delivery.png";
-import santanderLogo from "@/assets/santander.svg";
+import santanderLogo from "@/assets/capa curso santander.webp";
 
 export const personal = {
   name: "Wallace Coimbra",
