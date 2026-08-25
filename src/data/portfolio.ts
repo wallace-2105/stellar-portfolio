@@ -288,7 +288,7 @@ export const certificates: Certificate[] = [
     year: "2026",
     type: "certification",
     image: bradescoLogo,
-    glowColor: "#CC092F",
+    glowColor: "#FF9900",
     skills: ["Branch", "Commit", "Pull Request", "Open Source", "DevOps", "Version Control"],
   },
   {
@@ -306,7 +306,7 @@ export const certificates: Certificate[] = [
     year: "2026",
     type: "certification",
     image: bradescoLogo,
-    glowColor: "#CC092F",
+    glowColor: "#FF9900",
     skills: ["PostgreSQL", "Relational Database", "MySQL"],
   },
   {
