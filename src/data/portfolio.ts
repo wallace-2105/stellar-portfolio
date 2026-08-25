@@ -365,7 +365,7 @@ export const certificates: Certificate[] = [
     year: "2026",
     type: "course",
     image: awsLogoNova,
-    glowColor: "#FF9900",
+    glowColor: "#32A041",
     url: "/certificado-AWS-agents de ia em campo.pdf",
     skills: ["AWS", "IA", "Agentes de IA"],
   },
