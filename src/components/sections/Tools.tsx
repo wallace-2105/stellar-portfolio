@@ -149,10 +149,10 @@ const TOOL_LOGOS: Record<string, React.ReactNode> = {
       <path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z" fill="#A259FF" />
     </svg>
   ),
-  Canva: <img src={imgCanva} alt="Canva" className="w-full h-full object-contain" />,
-  "Microsoft Word": <img src={imgWord} alt="Microsoft Word" className="w-full h-full object-contain" />,
+  Canva: <img src={imgCanva} alt="Canva" className="w-full h-full object-contain" style={{ mixBlendMode: 'multiply' }} />,
+  "Microsoft Word": <img src={imgWord} alt="Microsoft Word" className="w-full h-full object-contain" style={{ mixBlendMode: 'multiply' }} />,
   "Microsoft Excel": <img src={imgExcel} alt="Microsoft Excel" className="w-full h-full object-contain" />,
-  "Microsoft PowerPoint": <img src={imgPowerpoint} alt="Microsoft PowerPoint" className="w-full h-full object-contain" />,
+  "Microsoft PowerPoint": <img src={imgPowerpoint} alt="Microsoft PowerPoint" className="w-full h-full object-contain" style={{ mixBlendMode: 'multiply' }} />,
   "Microsoft Teams": <img src={imgTeams} alt="Microsoft Teams" className="w-full h-full object-contain" />,
   Windows: (
     <svg className="w-full h-full" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
@@ -163,7 +163,7 @@ const TOOL_LOGOS: Record<string, React.ReactNode> = {
   "Claude Code": <img src={imgClaude} alt="Claude Code" className="w-full h-full object-contain" />,
   Expo: <img src={imgExpo} alt="Expo" className="w-full h-full object-contain" />,
   FastAPI: <img src={imgFastapi} alt="FastAPI" className="w-full h-full object-contain" />,
-  Codex: <img src={imgCodex} alt="Codex" className="w-full h-full object-contain" />,
+  Codex: <img src={imgCodex} alt="Codex" className="w-full h-full object-contain" style={{ mixBlendMode: 'multiply' }} />,
   "Aceternity UI": <img src={imgAceternity} alt="Aceternity UI" className="w-full h-full object-contain" />,
   "Power BI": <img src={imgPowerbi} alt="Power BI" className="w-full h-full object-contain" />,
   Cloudflare: <img src={imgCloudflare} alt="Cloudflare" className="w-full h-full object-contain" />,
