@@ -449,6 +449,16 @@ export const certificates: Certificate[] = [
     url: "/certificado- IBM Bob no dia a dia.pdf",
     skills: ["IBM Bob", "Git", "Modos de IA", "Contexto", "Fluxo de Trabalho"],
   },
+  {
+    title: "Aceleração Randstad - Service Desk",
+    issuer: "DIO",
+    year: "2026",
+    type: "course",
+    image: dioLogo,
+    glowColor: "#32A041",
+    url: "/certificado- aceleração randstad service desk.pdf",
+    skills: ["Service Desk", "Suporte Técnico", "ITIL", "Atendimento", "Help Desk"],
+  },
 ];
 
 export const tools: Tool[] = [
