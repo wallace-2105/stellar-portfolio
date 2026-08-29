@@ -469,6 +469,16 @@ export const certificates: Certificate[] = [
     url: "/certificado- ibm bob avançado mcp custom modes.pdf",
     skills: ["IBM Bob", "MCP", "Custom Modes", "Personalização", "IA Avançada"],
   },
+  {
+    title: "IBM Bob: IA de Nível Empresarial para Desenvolvedores e Tech Leaders",
+    issuer: "DIO",
+    year: "2026",
+    type: "course",
+    image: dioLogo,
+    glowColor: "#32A041",
+    url: "/certificadp ibm bob ia nivel empresarial.pdf",
+    skills: ["IBM Bob", "IA Empresarial", "Tech Leadership", "IBM", "Bootcamp"],
+  },
 ];
 
 export const tools: Tool[] = [
