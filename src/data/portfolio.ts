@@ -439,6 +439,16 @@ export const certificates: Certificate[] = [
     url: "/certificado-English Fundamentals.pdf",
     skills: ["Inglês", "English", "Job Search", "CV Writing", "Penn ELP"],
   },
+  {
+    title: "IBM Bob no Dia a Dia: Modos, Contexto e Fluxo Git",
+    issuer: "DIO",
+    year: "2026",
+    type: "course",
+    image: dioLogo,
+    glowColor: "#32A041",
+    url: "/certificado- IBM Bob no dia a dia.pdf",
+    skills: ["IBM Bob", "Git", "Modos de IA", "Contexto", "Fluxo de Trabalho"],
+  },
 ];
 
 export const tools: Tool[] = [
