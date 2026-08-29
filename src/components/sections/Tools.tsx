@@ -150,9 +150,9 @@ const TOOL_LOGOS: Record<string, React.ReactNode> = {
     </svg>
   ),
   Canva: <img src={imgCanva} alt="Canva" className="w-full h-full object-contain" style={{ mixBlendMode: 'multiply' }} />,
-  "Microsoft Word": <img src={imgWord} alt="Microsoft Word" className="w-full h-full object-contain" style={{ mixBlendMode: 'multiply' }} />,
+  "Microsoft Word": <img src={imgWord} alt="Microsoft Word" className="w-full h-full object-contain" />,
   "Microsoft Excel": <img src={imgExcel} alt="Microsoft Excel" className="w-full h-full object-contain" />,
-  "Microsoft PowerPoint": <img src={imgPowerpoint} alt="Microsoft PowerPoint" className="w-full h-full object-contain" style={{ mixBlendMode: 'multiply' }} />,
+  "Microsoft PowerPoint": <img src={imgPowerpoint} alt="Microsoft PowerPoint" className="w-full h-full object-contain" />,
   "Microsoft Teams": <img src={imgTeams} alt="Microsoft Teams" className="w-full h-full object-contain" />,
   Windows: (
     <svg className="w-full h-full" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
