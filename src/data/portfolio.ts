@@ -506,7 +506,7 @@ export const tools: Tool[] = [
   { name: "Windows", category: "Avançado", color: "#0078D4" },
   { name: "Microsoft Word", category: "Avançado", color: "#2B579A" },
   { name: "Microsoft Excel", category: "Intermediário", color: "#217346" },
-  { name: "Microsoft PowerPoint", category: "Intermediário", color: "#D24726" },
+  { name: "Microsoft PowerPoint", category: "Avançado", color: "#D24726" },
   { name: "Microsoft Teams", category: "Avançado", color: "#6264A7" },
   { name: "Power BI", category: "Intermediário", color: "#F2C811" },
   { name: "Cloudflare", category: "Intermediário", color: "#F38020" },
