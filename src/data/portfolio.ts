@@ -504,7 +504,7 @@ export const tools: Tool[] = [
   { name: "Codex", category: "Avançado", color: "#10A37F" },
   { name: "Aceternity UI", category: "Intermediário", color: "#181717" },
   { name: "Windows", category: "Avançado", color: "#0078D4" },
-  { name: "Microsoft Word", category: "Intermediário", color: "#2B579A" },
+  { name: "Microsoft Word", category: "Avançado", color: "#2B579A" },
   { name: "Microsoft Excel", category: "Intermediário", color: "#217346" },
   { name: "Microsoft PowerPoint", category: "Intermediário", color: "#D24726" },
   { name: "Microsoft Teams", category: "Avançado", color: "#6264A7" },
