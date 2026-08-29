@@ -479,6 +479,16 @@ export const certificates: Certificate[] = [
     url: "/certificadp ibm bob ia nivel empresarial.pdf",
     skills: ["IBM Bob", "IA Empresarial", "Tech Leadership", "IBM", "Bootcamp"],
   },
+  {
+    title: "Green Software Development - English",
+    issuer: "DIO",
+    year: "2026",
+    type: "course",
+    image: dioLogo,
+    glowColor: "#32A041",
+    url: "/green software devolopment ingles.pdf",
+    skills: ["Green Software", "Sustentabilidade", "Desenvolvimento Sustentável", "English"],
+  },
 ];
 
 export const tools: Tool[] = [
