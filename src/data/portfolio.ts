@@ -459,6 +459,16 @@ export const certificates: Certificate[] = [
     url: "/certificado- aceleração randstad service desk.pdf",
     skills: ["Service Desk", "Suporte Técnico", "ITIL", "Atendimento", "Help Desk"],
   },
+  {
+    title: "IBM Bob Avançado: MCP, Custom Modes e Personalização",
+    issuer: "DIO",
+    year: "2026",
+    type: "course",
+    image: dioLogo,
+    glowColor: "#32A041",
+    url: "/certificado- ibm bob avançado mcp custom modes.pdf",
+    skills: ["IBM Bob", "MCP", "Custom Modes", "Personalização", "IA Avançada"],
+  },
 ];
 
 export const tools: Tool[] = [
