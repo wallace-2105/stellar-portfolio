@@ -559,6 +559,16 @@ export const certificates: Certificate[] = [
     url: "/certificado-microsoft week - al data.pdf",
     skills: ["AI Data Engineering", "Microsoft", "Engenharia de Dados", "Inteligência Artificial"],
   },
+  {
+    title: "SQL Migration e Microsoft Fabric: da Modernização à Plataforma de Dados",
+    issuer: "DIO",
+    year: "2026",
+    type: "course",
+    image: dioLogo,
+    glowColor: "#32A041",
+    url: "/certificado-modernização á plataforma de dados.pdf",
+    skills: ["SQL Migration", "Microsoft Fabric", "Modernização de Dados", "Cloud"],
+  },
 ];
 
 export const tools: Tool[] = [
