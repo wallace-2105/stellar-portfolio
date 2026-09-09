@@ -519,6 +519,16 @@ export const certificates: Certificate[] = [
     url: "/certificado- sql server para azure.pdf",
     skills: ["SQL Server", "Azure", "Migração de Dados", "Banco de Dados"],
   },
+  {
+    title: "Domine a IA com Gemini",
+    issuer: "Santander Open Academy",
+    year: "2026",
+    type: "course",
+    image: santanderLogo,
+    glowColor: "#32A041",
+    url: "/certificado-Domine a IA com Gemini.pdf",
+    skills: ["Google Gemini", "Inteligência Artificial", "IA Generativa", "Prompts"],
+  },
 ];
 
 export const tools: Tool[] = [
