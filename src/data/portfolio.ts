@@ -499,6 +499,16 @@ export const certificates: Certificate[] = [
     url: "/Certificado de Conclusão AI-900.pdf",
     skills: ["AI-900", "Azure", "Inteligência Artificial", "Cloud Computing"],
   },
+  {
+    title: "Soluções de IA no GitHub",
+    issuer: "Fundação Bradesco",
+    year: "2026",
+    type: "course",
+    image: bradescoLogo,
+    glowColor: "#32A041",
+    url: "/Certificado de Conclusão IA NO GITHUB.pdf",
+    skills: ["GitHub", "Inteligência Artificial", "GitHub Copilot", "DevOps"],
+  },
 ];
 
 export const tools: Tool[] = [
