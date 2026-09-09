@@ -489,6 +489,16 @@ export const certificates: Certificate[] = [
     url: "/green software devolopment ingles.pdf",
     skills: ["Green Software", "Sustentabilidade", "Desenvolvimento Sustentável", "English"],
   },
+  {
+    title: "AI-900 - Fundamentos de IA no Azure",
+    issuer: "Fundação Bradesco",
+    year: "2026",
+    type: "course",
+    image: bradescoLogo,
+    glowColor: "#32A041",
+    url: "/Certificado de Conclusão AI-900.pdf",
+    skills: ["AI-900", "Azure", "Inteligência Artificial", "Cloud Computing"],
+  },
 ];
 
 export const tools: Tool[] = [
