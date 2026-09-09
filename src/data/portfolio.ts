@@ -509,6 +509,16 @@ export const certificates: Certificate[] = [
     url: "/Certificado de Conclusão IA NO GITHUB.pdf",
     skills: ["GitHub", "Inteligência Artificial", "GitHub Copilot", "DevOps"],
   },
+  {
+    title: "Modernização de Bancos de Dados: Estratégias de Migração do SQL Server para Azure",
+    issuer: "DIO",
+    year: "2026",
+    type: "course",
+    image: dioLogo,
+    glowColor: "#32A041",
+    url: "/certificado- sql server para azure.pdf",
+    skills: ["SQL Server", "Azure", "Migração de Dados", "Banco de Dados"],
+  },
 ];
 
 export const tools: Tool[] = [
