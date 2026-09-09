@@ -549,6 +549,16 @@ export const certificates: Certificate[] = [
     url: "/certificado-execução e validação de workloasds.pdf",
     skills: ["SQL", "Migração", "Workloads", "Validação", "Banco de Dados"],
   },
+  {
+    title: "Microsoft Week - AI Data Engineering",
+    issuer: "DIO",
+    year: "2026",
+    type: "course",
+    image: dioLogo,
+    glowColor: "#32A041",
+    url: "/certificado-microsoft week - al data.pdf",
+    skills: ["AI Data Engineering", "Microsoft", "Engenharia de Dados", "Inteligência Artificial"],
+  },
 ];
 
 export const tools: Tool[] = [
