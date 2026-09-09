@@ -569,6 +569,16 @@ export const certificates: Certificate[] = [
     url: "/certificado-modernização á plataforma de dados.pdf",
     skills: ["SQL Migration", "Microsoft Fabric", "Modernização de Dados", "Cloud"],
   },
+  {
+    title: "Segurança em Tecnologia da Informação",
+    issuer: "Fundação Bradesco",
+    year: "2025",
+    type: "course",
+    image: bradescoLogo,
+    glowColor: "#32A041",
+    url: "/certificado-segurança em tecnologia da informação.pdf",
+    skills: ["Segurança da Informação", "Cibersegurança", "TI", "Proteção de Dados"],
+  },
 ];
 
 export const tools: Tool[] = [
