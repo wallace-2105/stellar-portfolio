@@ -539,6 +539,16 @@ export const certificates: Certificate[] = [
     url: "/certificado-contruindo uma plataforma moderna de dados.pdf",
     skills: ["Microsoft Fabric", "SQL", "Engenharia de Dados", "Plataforma de Dados"],
   },
+  {
+    title: "Migração de SQL na Prática: Avaliação, Execução e Validação de Workloads",
+    issuer: "DIO",
+    year: "2026",
+    type: "course",
+    image: dioLogo,
+    glowColor: "#32A041",
+    url: "/certificado-execução e validação de workloasds.pdf",
+    skills: ["SQL", "Migração", "Workloads", "Validação", "Banco de Dados"],
+  },
 ];
 
 export const tools: Tool[] = [
