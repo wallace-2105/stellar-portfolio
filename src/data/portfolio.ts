@@ -529,6 +529,16 @@ export const certificates: Certificate[] = [
     url: "/certificado-Domine a IA com Gemini.pdf",
     skills: ["Google Gemini", "Inteligência Artificial", "IA Generativa", "Prompts"],
   },
+  {
+    title: "Do SQL ao Microsoft Fabric: Construindo uma Plataforma Moderna de Dados",
+    issuer: "DIO",
+    year: "2026",
+    type: "course",
+    image: dioLogo,
+    glowColor: "#32A041",
+    url: "/certificado-contruindo uma plataforma moderna de dados.pdf",
+    skills: ["Microsoft Fabric", "SQL", "Engenharia de Dados", "Plataforma de Dados"],
+  },
 ];
 
 export const tools: Tool[] = [
