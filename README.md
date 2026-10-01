@@ -136,7 +136,7 @@ Projetos, sobre, experiência, formação e contato organizados em uma jornada �
 ## 🎓 Trajetória
 
 ```
-2025 — Atual     🔧 Assistente de Operações · Suporte em Hardware & IoT — Scope Technology
+2025 — Atual     🔧 Logística, Dados & IoT — Scope Technology
 2021 — 2025      🏭 Operador de Máquina · Conferente — Gold Pan
 2019 — 2021      🍟 Atendente / Auxiliar de Recebimento — McDonald's
 
