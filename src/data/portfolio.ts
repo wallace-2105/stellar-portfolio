@@ -234,7 +234,7 @@ export const techStack: TechItem[] = [
 
 export const experiences: Experience[] = [
   {
-    role: "Logística, Dados e IoT",
+    role: "Analista de Operações | Logística, Dados e IoT",
     company: "Scope Technology",
     period: "2025 — Atual",
     shortDescription: "Atuação na área operacional e técnica, realizando suporte em dispositivos IoT, configuração de rastreadores, logística tecnológica e preparação de equipamentos para clientes.",
