@@ -171,7 +171,7 @@ Estou aberto a novos projetos e colaborações.
 
 [![Portfólio Completo](https://img.shields.io/badge/🌐_Explorar_Portfólio_Completo-6366F1?style=for-the-badge)](https://stellar-portfolio.wallace-wcs83.workers.dev/)
 
-📍 São Paulo, Brasil &nbsp;•&nbsp; ✉️ wallace.wcs83@gmail.com
+📍 São Paulo, Brasil &nbsp;•&nbsp; ✉️ wallace.wcs84@gmail.com
 
 <br/>
 
