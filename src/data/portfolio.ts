@@ -298,6 +298,21 @@ export const projects: Project[] = [
       "Funcionamento 100% offline no navegador",
     ],
   },
+  {
+    title: "RedeMaster — Redes de Computadores",
+    description: `Portal acadêmico em SPA para estudo de Redes de Computadores, reunindo resumo teórico aprofundado, calculadora dinâmica de sub-redes IPv4/CIDR e simulado com 30 questões e gabarito comentado.`,
+    image: "https://opengraph.githubassets.com/1/wallace-2105/Redes-de-computador-",
+    tags: ["HTML5", "CSS3", "JavaScript"],
+    themeColor: "#0284c7",
+    github: "https://github.com/wallace-2105/Redes-de-computador-",
+    demo: "https://wallace-2105.github.io/Redes-de-computador-/",
+    features: [
+      "Resumo teórico em accordions com busca instantânea",
+      "Calculadora dinâmica de sub-redes IPv4 e prefixos CIDR",
+      "Simulado com 30 questões divididas por nível de dificuldade",
+      "Relatório analítico com justificativa técnica por alternativa",
+    ],
+  },
 ];
 
 export const aboutParagraphs = [
