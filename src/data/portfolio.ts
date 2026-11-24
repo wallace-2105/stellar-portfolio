@@ -282,6 +282,22 @@ export const projects: Project[] = [
       "Integração contínua configurada via GitHub Actions",
     ],
   },
+  {
+    title: "DETRAN Quiz",
+    description: `Plataforma web mobile-first de treinamento para a prova teórica do DETRAN, criada para oferecer uma experiência rápida e moderna no celular, com modo escuro, feedback imediato e revisão automática de erros.`,
+    image: "https://opengraph.githubassets.com/1/wallace-2105/DETRAN-",
+    tags: ["HTML5", "CSS3", "JavaScript"],
+    themeColor: "#6c63ff",
+    github: "https://github.com/wallace-2105/DETRAN-",
+    demo: "https://wallace-2105.github.io/DETRAN-/",
+    features: [
+      "Interface mobile-first com tema escuro e claro persistente",
+      "Modos de estudo livre e simulado cronometrado",
+      "Feedback imediato com explicações detalhadas por questão",
+      "Rastreamento e modo dedicado para revisão de erros",
+      "Funcionamento 100% offline no navegador",
+    ],
+  },
 ];
 
 export const aboutParagraphs = [
