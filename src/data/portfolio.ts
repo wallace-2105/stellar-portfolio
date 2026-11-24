@@ -222,6 +222,21 @@ export const projects: Project[] = [
       "Console de simulação e monitoramento de coordenadas GPS",
     ],
   },
+  {
+    title: "SmartPark",
+    description: `Sistema full stack para controle e tarifação de estacionamento rotativo em tempo real. Desenvolvido em colaboração (com atuação majoritária nos commits) unindo backend thread-safe em ASP.NET Core 8 (C#) com frontend interativo em React 18, TypeScript e Vite.`,
+    image: "https://opengraph.githubassets.com/1/HigorLima029/Sistema-para-um-Estacionamento-com-C-",
+    tags: ["C#", ".NET 8", "React", "TypeScript"],
+    themeColor: "#512BD4",
+    github: "https://github.com/HigorLima029/Sistema-para-um-Estacionamento-com-C-",
+    features: [
+      "API RESTful em ASP.NET Core 8 com operações thread-safe",
+      "Cálculo automatizado de estadias com tarifação fracionada",
+      "Painel com letreiro digital e controle de vagas em tempo real",
+      "Emissão de tickets e cupom fiscal térmico formatado",
+      "Documentação interativa com OpenAPI / Swagger",
+    ],
+  },
 ];
 
 export const aboutParagraphs = [
