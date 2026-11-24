@@ -252,6 +252,21 @@ export const projects: Project[] = [
       "Arquitetura limpa em camadas com validações de domínio",
     ],
   },
+  {
+    title: "IMEI CHECK",
+    description: `Sistema corporativo local, gratuito e offline para validação de IMEIs e identificação de dispositivos IoT/rastreadores por código TAC. Desenvolvido em Python com Streamlit e SQLite para operações de telemetria e chips M2M, eliminando dependência de sites externos.`,
+    image: "https://opengraph.githubassets.com/1/wallace-2105/IMEI-CHECK",
+    tags: ["Python", "Streamlit", "SQLite"],
+    themeColor: "#10b981",
+    github: "https://github.com/wallace-2105/IMEI-CHECK",
+    features: [
+      "Validação estrutural de 15 dígitos e algoritmo de Luhn",
+      "Consulta instantânea de TAC em banco SQLite local offline",
+      "Análise em lote com exportação imediata para Excel (.xlsx)",
+      "Histórico local auditável e importação de CSV interno",
+      "Suíte com 22 testes automatizados em Pytest",
+    ],
+  },
 ];
 
 export const aboutParagraphs = [
