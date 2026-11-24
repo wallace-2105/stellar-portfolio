@@ -267,6 +267,21 @@ export const projects: Project[] = [
       "Suíte com 22 testes automatizados em Pytest",
     ],
   },
+  {
+    title: "API de Gerenciamento de Pedidos",
+    description: `API RESTful em Node.js e Express para gerenciamento de pedidos de loja, com arquitetura em camadas (Routes, Controller, Service, Repository) e máquina de estados rigorosamente validada para o ciclo de vida dos pedidos.`,
+    image: "https://opengraph.githubassets.com/1/wallace-2105/API-de-Gerenciamento-de-Pedidos",
+    tags: ["Node.js", "JavaScript", "Express", "Jest"],
+    themeColor: "#22c55e",
+    github: "https://github.com/wallace-2105/API-de-Gerenciamento-de-Pedidos",
+    features: [
+      "Arquitetura em camadas (Routes, Controller, Service e Repository)",
+      "Máquina de estados validada para transições de status",
+      "Tratamento centralizado de erros customizados",
+      "Testes unitários e de integração com Jest e Supertest",
+      "Integração contínua configurada via GitHub Actions",
+    ],
+  },
 ];
 
 export const aboutParagraphs = [
