@@ -237,6 +237,21 @@ export const projects: Project[] = [
       "Documentação interativa com OpenAPI / Swagger",
     ],
   },
+  {
+    title: "TicketFlow",
+    description: `Plataforma corporativa de Service Desk e gestão de incidentes de TI alinhada às boas práticas ITIL/ITSM. Desenvolvida em TypeScript, Node.js e Express com workflow auditável de chamados, alternância de papéis (Solicitante vs Suporte), suíte de 29 testes com Jest e CI/CD.`,
+    image: "https://opengraph.githubassets.com/1/wallace-2105/TicketFlow",
+    tags: ["TypeScript", "Node.js", "Express", "Jest"],
+    themeColor: "#0ea5e9",
+    github: "https://github.com/wallace-2105/TicketFlow",
+    features: [
+      "Workflow auditável (Aberto, Em Atendimento, Resolvido e Cancelado)",
+      "Dashboard web reativo com alternância de papéis",
+      "29 testes automatizados com Jest e Supertest",
+      "Testes de carga multithread em Python e esteira CI/CD",
+      "Arquitetura limpa em camadas com validações de domínio",
+    ],
+  },
 ];
 
 export const aboutParagraphs = [
