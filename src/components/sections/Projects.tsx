@@ -190,6 +190,64 @@ const TECH_ICONS: Record<string, { icon: React.ReactNode; color: string }> = {
     icon: <img src={renderIcon} alt="Render" className="size-4 object-contain" />,
     color: "#46E3B7",
   },
+  Java: {
+    icon: (
+      <svg className="size-4" viewBox="0 0 256 346" xmlns="http://www.w3.org/2000/svg">
+        <path d="M82.554 267.473s-13.198 7.675 9.393 10.272c27.369 3.122 41.356 2.675 71.517-3.034 0 0 7.93 4.972 19.003 9.279-67.611 28.977-153.019-1.679-99.913-16.517M74.292 229.659s-14.803 10.958 7.805 13.296c29.236 3.016 52.324 3.263 92.276-4.43 0 0 5.526 5.602 14.215 8.666-81.747 23.904-172.842 1.885-114.296-17.532" fill="#5382A1" />
+        <path d="M143.942 165.515c16.66 19.18-4.377 36.44-4.377 36.44s42.301-21.837 22.874-49.183c-18.144-25.5-32.059-38.172 43.268-81.858 0 0-118.238 29.53-61.765 94.601" fill="#E76F00" />
+        <path d="M233.364 295.442s9.767 8.047-10.757 14.273c-39.026 11.823-162.432 15.393-196.714.471-12.323-5.36 10.787-12.8 18.056-14.362 7.581-1.644 11.914-1.337 11.914-1.337-13.705-9.655-88.583 18.957-38.034 27.15 137.853 22.356 251.292-10.066 215.535-26.195M88.9 190.48s-62.771 14.907-22.228 20.323c17.118 2.292 51.243 1.774 83.03-.89 25.978-2.19 52.063-6.85 52.063-6.85s-9.16 3.923-15.787 8.448c-63.744 16.765-186.886 8.966-151.435-8.183 29.981-14.492 54.357-12.848 54.357-12.848M201.506 253.422c64.8-33.672 34.839-66.03 13.927-61.67-5.126 1.066-7.411 1.991-7.411 1.991s1.903-2.98 5.537-4.27c41.37-14.545 73.187 42.897-13.355 65.647 0 0 1.003-.895 1.302-1.698" fill="#5382A1" />
+        <path d="M162.439 0s35.887 35.89-34.037 91.101c-56.071 44.282-12.786 69.53-.023 98.377-32.73-29.53-56.75-55.526-40.635-79.72C111.395 74.612 176.918 57.393 162.439 0" fill="#E76F00" />
+        <path d="M95.268 344.665c62.199 3.982 157.712-2.209 159.974-31.64 0 0-4.348 11.158-51.404 20.018-53.088 9.99-118.564 8.824-157.399 2.421 0 0 7.953 6.58 48.829 9.201" fill="#5382A1" />
+      </svg>
+    ),
+    color: "#ED8B00",
+  },
+  "Spring Boot": {
+    icon: (
+      <svg className="size-4" viewBox="0 0 24 24" fill="#6DB33F" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21.9 4.5a11.3 11.3 0 0 1-1.6 2.5A10.7 10.7 0 0 0 12 2.9a10.9 10.9 0 0 0-7.7 18.6l-.5.4c-.3.3-.6.5-.9.7a12 12 0 0 0 19-18.1ZM8.8 18.4c-.6 0-1.1-.5-1.1-1.1s.5-1.1 1.1-1.1 1.1.5 1.1 1.1-.5 1.1-1.1 1.1Zm10.7-2.6c-2.5 3.4-7.9 2.3-11.4 2.4 0 0-.6.1-1.2.1 0 0 .2-.1.5-.2 2.3-.8 3.4-1 4.8-1.7 2.6-1.3 5.3-4.3 5.8-7.3-1 2.9-4.1 5.4-6.9 6.5-1.9.7-5.4 1.4-5.4 1.4l-.2-.1c-2.4-1.2-2.5-6.5 1.9-8.2 1.9-.7 3.8-.3 5.9-.8 2.2-.5 4.8-2.2 5.9-4.3 1.2 3.7 2.7 9.6.3 12.2Z" />
+      </svg>
+    ),
+    color: "#6DB33F",
+  },
+  ".NET 8": {
+    icon: (
+      <svg className="size-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <rect width="24" height="24" rx="5" fill="#512BD4" />
+        <text x="12" y="15.5" textAnchor="middle" fill="#fff" fontSize="8.5" fontWeight="bold" fontFamily="sans-serif">
+          .NET
+        </text>
+      </svg>
+    ),
+    color: "#512BD4",
+  },
+  Express: {
+    icon: (
+      <svg className="size-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="11" fill="#18181b" stroke="currentColor" strokeWidth="1.2" />
+        <text x="12" y="15.5" textAnchor="middle" fill="#fff" fontSize="9.5" fontWeight="bold" fontFamily="monospace">
+          ex
+        </text>
+      </svg>
+    ),
+    color: "#94a3b8",
+  },
+  Jest: {
+    icon: (
+      <svg className="size-4" viewBox="0 0 24 24" fill="#C21325" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L4.5 6.5 6.8 17 12 22l5.2-5 2.3-10.5L12 2zm0 3.2l4.4 2.6-1.4 6.7-3 2.9-3-2.9-1.4-6.7L12 5.2z" />
+      </svg>
+    ),
+    color: "#C21325",
+  },
+  Streamlit: {
+    icon: (
+      <svg className="size-4" viewBox="0 0 24 24" fill="#FF4B4B" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3L2 9l10 6 10-6-10-6zm0 9l-10 6h20l-10-6z" />
+      </svg>
+    ),
+    color: "#FF4B4B",
+  },
 };
 
 const getTechIcon = (tag: string) => {
@@ -235,7 +293,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, delay: index * 0.08 }}
+      transition={{ duration: 0.6, delay: (index % LOAD_MORE_STEP) * 0.08 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-card border border-border/60 shadow-soft transition-all duration-300"
@@ -430,7 +488,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           </button>
 
           {/* Action buttons */}
-          <div className="grid grid-cols-2 gap-2.5">
+          <div className={`grid gap-2.5 ${project.github && project.demo ? "grid-cols-2" : "grid-cols-1"}`}>
             {project.github && (
               <a
                 href={project.github}
@@ -470,12 +528,25 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 }
 
 const INITIAL_COUNT = 6;
+const LOAD_MORE_STEP = 6;
 
 export function Projects() {
-  const [showAll, setShowAll] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
 
-  const visibleProjects = showAll ? projects : projects.slice(0, INITIAL_COUNT);
-  const hasMore = projects.length > INITIAL_COUNT;
+  const visibleProjects = projects.slice(0, visibleCount);
+  const remainingCount = Math.max(0, projects.length - visibleCount);
+  const nextBatchCount = Math.min(LOAD_MORE_STEP, remainingCount);
+  const hasMore = remainingCount > 0;
+  const isExpandedList = visibleCount > INITIAL_COUNT;
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => Math.min(projects.length, prev + LOAD_MORE_STEP));
+  };
+
+  const handleShowLess = () => {
+    setVisibleCount(INITIAL_COUNT);
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section id="projects" className="py-24 px-6 bg-surface">
@@ -492,45 +563,47 @@ export function Projects() {
           ))}
         </div>
 
-        {/* Load More / Show Less Button */}
-        {hasMore && (
+        {/* Load More / Show Less Buttons */}
+        {(hasMore || isExpandedList) && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="mt-14 flex justify-center"
+            className="mt-14 flex flex-wrap items-center justify-center gap-4"
           >
-            <button
-              onClick={() => setShowAll((prev) => !prev)}
-              className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm text-sm font-semibold text-foreground/80 hover:text-foreground transition-all duration-300 cursor-pointer overflow-hidden"
-              style={{}}
-            >
-              {/* Shimmer effect on hover */}
-              <span className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
+            {hasMore && (
+              <button
+                onClick={handleLoadMore}
+                className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm text-sm font-semibold text-foreground/80 hover:text-foreground transition-all duration-300 cursor-pointer overflow-hidden"
+              >
+                {/* Shimmer effect on hover */}
+                <span className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
 
-              {/* Left decorative line */}
-              <span className="hidden sm:block w-12 h-px bg-gradient-to-r from-transparent to-border/60 group-hover:to-primary/40 transition-colors duration-300" />
+                {/* Left decorative line */}
+                <span className="hidden sm:block w-12 h-px bg-gradient-to-r from-transparent to-border/60 group-hover:to-primary/40 transition-colors duration-300" />
 
-              <span className="flex items-center gap-2">
-                {showAll ? (
-                  <>
-                    <ChevronUp className="size-4 transition-transform duration-300" />
-                    Mostrar Menos
-                  </>
-                ) : (
-                  <>
-                    <ChevronDown className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" />
-                    Carregar Mais Projetos
-                    <span className="inline-flex items-center justify-center size-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">
-                      +{projects.length - INITIAL_COUNT}
-                    </span>
-                  </>
-                )}
-              </span>
+                <span className="flex items-center gap-2">
+                  <ChevronDown className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+                  Carregar Mais Projetos
+                  <span className="inline-flex items-center justify-center px-2 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">
+                    +{nextBatchCount} de {remainingCount}
+                  </span>
+                </span>
 
-              {/* Right decorative line */}
-              <span className="hidden sm:block w-12 h-px bg-gradient-to-l from-transparent to-border/60 group-hover:to-primary/40 transition-colors duration-300" />
-            </button>
+                {/* Right decorative line */}
+                <span className="hidden sm:block w-12 h-px bg-gradient-to-l from-transparent to-border/60 group-hover:to-primary/40 transition-colors duration-300" />
+              </button>
+            )}
+
+            {isExpandedList && (
+              <button
+                onClick={handleShowLess}
+                className="group relative inline-flex items-center gap-2 px-6 py-4 rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm text-sm font-semibold text-muted-foreground hover:text-foreground transition-all duration-300 cursor-pointer"
+              >
+                <ChevronUp className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5" />
+                Mostrar Menos
+              </button>
+            )}
           </motion.div>
         )}
       </div>
