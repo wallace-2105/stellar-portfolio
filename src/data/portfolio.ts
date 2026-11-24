@@ -313,6 +313,21 @@ export const projects: Project[] = [
       "Relatório analítico com justificativa técnica por alternativa",
     ],
   },
+  {
+    title: "Mestre do Banco de Dados Avançado",
+    description: `Plataforma interativa de estudos e simulado acadêmico focada em Banco de Dados Avançado, ecossistema Oracle Database e programação procedural PL/SQL, com resumos práticos e explicações pedagógicas.`,
+    image: "https://opengraph.githubassets.com/1/wallace-2105/Banco-de-Dados-Avancado",
+    tags: ["HTML5", "CSS3", "JavaScript"],
+    themeColor: "#ef4444",
+    github: "https://github.com/wallace-2105/Banco-de-Dados-Avancado",
+    demo: "https://wallace-2105.github.io/Banco-de-Dados-Avancado/",
+    features: [
+      "Módulos teóricos focados em Oracle Database e PL/SQL",
+      "Simulado interativo com 30 questões universitárias",
+      "Gabarito comentado com justificativas técnicas detalhadas",
+      "Layout 100% responsivo para desktop, tablet e celular",
+    ],
+  },
 ];
 
 export const aboutParagraphs = [
