@@ -206,7 +206,22 @@ export const projects: Project[] = [
       "Arquitetura limpa em Monorepo e End-to-End Type Safety",
       "Integração completa entre Frontend e Backend"
     ],
-  }
+  },
+  {
+    title: "MotoTrack",
+    description: `Plataforma corporativa para monitoramento e rastreamento de entregas por motoboys em tempo real. Combina backend em Java 21 com Spring Boot para mensageria WebSocket (STOMP/SockJS) e dashboard moderno em React + TypeScript com mapa interativo em Leaflet.`,
+    image: "https://opengraph.githubassets.com/1/wallace-2105/Monitoramento-De-Entregas-API",
+    tags: ["Java", "Spring Boot", "React", "TypeScript", "Tailwind CSS"],
+    themeColor: "#f97316",
+    github: "https://github.com/wallace-2105/Monitoramento-De-Entregas-API",
+    features: [
+      "Dashboard operacional com métricas em tempo real",
+      "Mapa de rastreamento geográfico com Leaflet",
+      "Transmissão de geolocalização via WebSocket (STOMP)",
+      "Gestão completa do ciclo de vida das entregas",
+      "Console de simulação e monitoramento de coordenadas GPS",
+    ],
+  },
 ];
 
 export const aboutParagraphs = [
