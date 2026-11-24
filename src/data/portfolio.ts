@@ -328,6 +328,21 @@ export const projects: Project[] = [
       "Layout 100% responsivo para desktop, tablet e celular",
     ],
   },
+  {
+    title: "Tópicos Avançados em Sistemas II",
+    description: `Recurso Educacional Aberto (REA) interativo cobrindo Engenharia DevOps, CI/CD, IaC, Docker/Kubernetes, Observabilidade e Design Thinking, com revisão conceitual, simulado calibrado e diagnóstico de desempenho.`,
+    image: "https://opengraph.githubassets.com/1/wallace-2105/Topicos-Avancados-em-Sistemas",
+    tags: ["HTML5", "CSS3", "JavaScript"],
+    themeColor: "#9333ea",
+    github: "https://github.com/wallace-2105/Topicos-Avancados-em-Sistemas",
+    demo: "https://wallace-2105.github.io/Topicos-Avancados-em-Sistemas/",
+    features: [
+      "Guia completo de DevOps, CI/CD, IaC e Observabilidade",
+      "Conteúdo prático de Design Thinking e inovação",
+      "Simulado com 30 questões calibradas (Fácil, Médio e Difícil)",
+      "Motor de diagnóstico mapeando pontos fortes e de revisão",
+    ],
+  },
 ];
 
 export const aboutParagraphs = [
