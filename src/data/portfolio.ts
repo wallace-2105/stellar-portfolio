@@ -351,7 +351,7 @@ export const projects: Project[] = [
 ];
 
 export const aboutParagraphs = [
-  "Sou estudante de Análise e Desenvolvimento de Sistemas e alguém que acredita no poder da tecnologia para simplificar desafios e criar novas oportunidades.",
+  "Sou estudante de Engenharia de Software e alguém que acredita no poder da tecnologia para simplificar desafios e criar novas oportunidades.",
   "Minha trajetória foi construída através da busca constante por aprendizado, evolução e novos conhecimentos. Gosto de explorar ideias, desenvolver projetos e enfrentar desafios que me permitam crescer tanto profissionalmente quanto pessoalmente.",
   "Mais do que escrever código, meu objetivo é criar soluções úteis, funcionais e que gerem valor para as pessoas. Estou sempre em busca de novas experiências, tecnologias e oportunidades que contribuam para minha evolução na área de desenvolvimento de software."
 ];
