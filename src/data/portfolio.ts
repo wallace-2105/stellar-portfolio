@@ -28,6 +28,7 @@ import imgDelivery from "@/assets/delivery.png";
 import santanderLogo from "@/assets/capa curso santander.webp";
 import imgDetran from "@/assets/detran.png";
 import imgRedemaster from "@/assets/redemaster.png";
+import imgBancoDados from "@/assets/banco-dados.png";
 
 export const personal = {
   name: "Wallace Coimbra",
@@ -318,7 +319,7 @@ export const projects: Project[] = [
   {
     title: "Mestre do Banco de Dados Avançado",
     description: `Plataforma interativa de estudos e simulado acadêmico focada em Banco de Dados Avançado, ecossistema Oracle Database e programação procedural PL/SQL, com resumos práticos e explicações pedagógicas.`,
-    image: "https://opengraph.githubassets.com/1/wallace-2105/Banco-de-Dados-Avancado",
+    image: imgBancoDados,
     tags: ["HTML5", "CSS3", "JavaScript"],
     themeColor: "#ef4444",
     github: "https://github.com/wallace-2105/Banco-de-Dados-Avancado",
