@@ -26,6 +26,7 @@ import dioLogo from "@/assets/diologo.png";
 import awsLogoNova from "@/assets/awslogo.png";
 import imgDelivery from "@/assets/delivery.png";
 import santanderLogo from "@/assets/capa curso santander.webp";
+import imgDetran from "@/assets/detran.png";
 
 export const personal = {
   name: "Wallace Coimbra",
@@ -285,7 +286,7 @@ export const projects: Project[] = [
   {
     title: "DETRAN Quiz",
     description: `Plataforma web mobile-first de treinamento para a prova teórica do DETRAN, criada para oferecer uma experiência rápida e moderna no celular, com modo escuro, feedback imediato e revisão automática de erros.`,
-    image: "https://opengraph.githubassets.com/1/wallace-2105/DETRAN-",
+    image: imgDetran,
     tags: ["HTML5", "CSS3", "JavaScript"],
     themeColor: "#6c63ff",
     github: "https://github.com/wallace-2105/DETRAN-",
