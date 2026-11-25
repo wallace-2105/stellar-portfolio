@@ -27,6 +27,7 @@ import awsLogoNova from "@/assets/awslogo.png";
 import imgDelivery from "@/assets/delivery.png";
 import santanderLogo from "@/assets/capa curso santander.webp";
 import imgDetran from "@/assets/detran.png";
+import imgRedemaster from "@/assets/redemaster.png";
 
 export const personal = {
   name: "Wallace Coimbra",
@@ -302,7 +303,7 @@ export const projects: Project[] = [
   {
     title: "RedeMaster — Redes de Computadores",
     description: `Portal acadêmico em SPA para estudo de Redes de Computadores, reunindo resumo teórico aprofundado, calculadora dinâmica de sub-redes IPv4/CIDR e simulado com 30 questões e gabarito comentado.`,
-    image: "https://opengraph.githubassets.com/1/wallace-2105/Redes-de-computador-",
+    image: imgRedemaster,
     tags: ["HTML5", "CSS3", "JavaScript"],
     themeColor: "#0284c7",
     github: "https://github.com/wallace-2105/Redes-de-computador-",
