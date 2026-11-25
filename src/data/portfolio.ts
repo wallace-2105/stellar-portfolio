@@ -30,6 +30,7 @@ import imgDetran from "@/assets/detran.png";
 import imgRedemaster from "@/assets/redemaster.png";
 import imgBancoDados from "@/assets/banco-dados.png";
 import imgTopicosSistemas from "@/assets/topicos-sistemas.png";
+import imgImeiCheck from "@/assets/Captura de tela 2026-11-25 112229.png";
 
 export const personal = {
   name: "Wallace Coimbra",
@@ -259,7 +260,7 @@ export const projects: Project[] = [
   {
     title: "IMEI CHECK",
     description: `Sistema corporativo local, gratuito e offline para validação de IMEIs e identificação de dispositivos IoT/rastreadores por código TAC. Desenvolvido em Python com Streamlit e SQLite para operações de telemetria e chips M2M, eliminando dependência de sites externos.`,
-    image: "https://opengraph.githubassets.com/1/wallace-2105/IMEI-CHECK",
+    image: imgImeiCheck,
     tags: ["Python", "Streamlit", "SQLite"],
     themeColor: "#10b981",
     github: "https://github.com/wallace-2105/IMEI-CHECK",
