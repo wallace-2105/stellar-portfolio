@@ -29,6 +29,7 @@ import santanderLogo from "@/assets/capa curso santander.webp";
 import imgDetran from "@/assets/detran.png";
 import imgRedemaster from "@/assets/redemaster.png";
 import imgBancoDados from "@/assets/banco-dados.png";
+import imgTopicosSistemas from "@/assets/topicos-sistemas.png";
 
 export const personal = {
   name: "Wallace Coimbra",
@@ -334,7 +335,7 @@ export const projects: Project[] = [
   {
     title: "Tópicos Avançados em Sistemas II",
     description: `Recurso Educacional Aberto (REA) interativo cobrindo Engenharia DevOps, CI/CD, IaC, Docker/Kubernetes, Observabilidade e Design Thinking, com revisão conceitual, simulado calibrado e diagnóstico de desempenho.`,
-    image: "https://opengraph.githubassets.com/1/wallace-2105/Topicos-Avancados-em-Sistemas",
+    image: imgTopicosSistemas,
     tags: ["HTML5", "CSS3", "JavaScript"],
     themeColor: "#9333ea",
     github: "https://github.com/wallace-2105/Topicos-Avancados-em-Sistemas",
