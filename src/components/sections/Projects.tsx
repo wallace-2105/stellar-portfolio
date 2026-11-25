@@ -1,9 +1,23 @@
-import { useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Server, CheckCircle2 } from "lucide-react";
+import {
+  ExternalLink,
+  ChevronDown,
+  ChevronUp,
+  ChevronLeft,
+  ChevronRight,
+  Server,
+  CheckCircle2,
+  LayoutGrid,
+  Orbit,
+} from "lucide-react";
 import { Github } from "@/components/icons";
 import { projects } from "@/data/portfolio";
 import { SectionHeading } from "@/components/SectionHeading";
+import CircularCarousel, {
+  type CircularCarouselHandle,
+  type CircularCarouselItem,
+} from "@/components/ui/CircularCarousel";
 import type { Project } from "@/types/portfolio";
 import tursoIcon from "@/assets/turso.png";
 import renderIcon from "@/assets/render.png";
@@ -531,8 +545,23 @@ const INITIAL_COUNT = 6;
 const LOAD_MORE_STEP = 6;
 
 export function Projects() {
+  const [viewMode, setViewMode] = useState<"showcase" | "grid">("showcase");
+  const [activeIndex, setActiveIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
+  const carouselRef = useRef<CircularCarouselHandle>(null);
 
+  const carouselItems = useMemo<CircularCarouselItem[]>(
+    () =>
+      projects.map((project) => ({
+        src: project.image,
+        alt: project.title,
+        title: project.title,
+        subtitle: project.tags.slice(0, 3).join(" • "),
+      })),
+    []
+  );
+
+  const activeProject = projects[activeIndex] ?? projects[0];
   const visibleProjects = projects.slice(0, visibleCount);
   const remainingCount = Math.max(0, projects.length - visibleCount);
   const nextBatchCount = Math.min(LOAD_MORE_STEP, remainingCount);
@@ -551,60 +580,327 @@ export function Projects() {
   return (
     <section id="projects" className="py-24 px-6 bg-surface">
       <div className="max-w-7xl mx-auto">
-        <SectionHeading
-          eyebrow="Trabalhos selecionados"
-          title="Projetos em Destaque"
-          description="Confira meus últimos trabalhos e projetos que desenvolvi ao longo do tempo."
-        />
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+          <div className="[&>div]:mb-0">
+            <SectionHeading
+              eyebrow="Trabalhos selecionados"
+              title="Projetos em Destaque"
+              description="Navegue pela vitrine interativa para os lados ou alterne para a grade completa."
+            />
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-10 lg:gap-12">
-          {visibleProjects.map((project, i) => (
-            <ProjectCard key={project.title} project={project} index={i} />
-          ))}
+          <div className="inline-flex items-center self-start md:self-auto p-1 rounded-xl border border-border/60 bg-card/80 backdrop-blur-sm">
+            <button
+              type="button"
+              onClick={() => setViewMode("showcase")}
+              className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                viewMode === "showcase"
+                  ? "bg-primary text-primary-foreground shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Orbit className="size-3.5" />
+              Vitrine 3D
+            </button>
+            <button
+              type="button"
+              onClick={() => setViewMode("grid")}
+              className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                viewMode === "grid"
+                  ? "bg-primary text-primary-foreground shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <LayoutGrid className="size-3.5" />
+              Grade ({projects.length})
+            </button>
+          </div>
         </div>
 
-        {/* Load More / Show Less Buttons */}
-        {(hasMore || isExpandedList) && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            className="mt-14 flex flex-wrap items-center justify-center gap-4"
-          >
-            {hasMore && (
-              <button
-                onClick={handleLoadMore}
-                className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm text-sm font-semibold text-foreground/80 hover:text-foreground transition-all duration-300 cursor-pointer overflow-hidden"
-              >
-                {/* Shimmer effect on hover */}
-                <span className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
+        {viewMode === "showcase" ? (
+          <div className="space-y-8">
+            {/* 3D Vitrine Carousel */}
+            <div className="relative rounded-3xl border border-border/60 bg-card/40 backdrop-blur-sm overflow-hidden">
+              <div
+                className="absolute inset-0 pointer-events-none transition-colors duration-500"
+                style={{
+                  background: `radial-gradient(ellipse at 50% 45%, ${activeProject.themeColor ?? "#6366f1"}18 0%, transparent 65%)`,
+                }}
+              />
 
-                {/* Left decorative line */}
-                <span className="hidden sm:block w-12 h-px bg-gradient-to-r from-transparent to-border/60 group-hover:to-primary/40 transition-colors duration-300" />
+              <div className="relative h-[280px] sm:h-[340px] md:h-[390px] w-full">
+                <CircularCarousel
+                  ref={carouselRef}
+                  items={carouselItems}
+                  preset="cylinder"
+                  intro="rise"
+                  cardWidth={340}
+                  aspectRatio={1.6}
+                  gap={26}
+                  tilt={-4}
+                  perspective={2400}
+                  autoplay="off"
+                  snap={true}
+                  pauseOnHover={true}
+                  focusOnClick={true}
+                  parallax={0.25}
+                  stretch={0.35}
+                  depthFade={0.55}
+                  fadeColor="var(--surface)"
+                  innerShade={0.75}
+                  cornerRadius={14}
+                  captions={false}
+                  onChange={setActiveIndex}
+                />
 
-                <span className="flex items-center gap-2">
-                  <ChevronDown className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" />
-                  Carregar Mais Projetos
-                  <span className="inline-flex items-center justify-center px-2 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">
-                    +{nextBatchCount} de {remainingCount}
+                {/* Left / Right navigation arrows */}
+                <button
+                  type="button"
+                  onClick={() => carouselRef.current?.prev()}
+                  aria-label="Projeto anterior"
+                  className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-20 size-10 sm:size-11 rounded-full border border-border/70 bg-background/85 backdrop-blur-md flex items-center justify-center text-foreground hover:scale-105 transition-transform shadow-md cursor-pointer"
+                >
+                  <ChevronLeft className="size-5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => carouselRef.current?.next()}
+                  aria-label="Próximo projeto"
+                  className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-20 size-10 sm:size-11 rounded-full border border-border/70 bg-background/85 backdrop-blur-md flex items-center justify-center text-foreground hover:scale-105 transition-transform shadow-md cursor-pointer"
+                >
+                  <ChevronRight className="size-5" />
+                </button>
+
+                {/* Bottom counter & hint */}
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 px-4 py-1.5 rounded-full border border-border/60 bg-background/80 backdrop-blur-md text-[11px] text-muted-foreground pointer-events-none">
+                  <span className="font-bold text-foreground tabular-nums">
+                    {String(activeIndex + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
                   </span>
-                </span>
+                  <span className="hidden sm:inline opacity-60">•</span>
+                  <span className="hidden sm:inline">Arraste, clique em uma capa ou use as setas</span>
+                </div>
+              </div>
+            </div>
 
-                {/* Right decorative line */}
-                <span className="hidden sm:block w-12 h-px bg-gradient-to-l from-transparent to-border/60 group-hover:to-primary/40 transition-colors duration-300" />
-              </button>
-            )}
-
-            {isExpandedList && (
-              <button
-                onClick={handleShowLess}
-                className="group relative inline-flex items-center gap-2 px-6 py-4 rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm text-sm font-semibold text-muted-foreground hover:text-foreground transition-all duration-300 cursor-pointer"
+            {/* Active Project Details Panel ("Cardápio" synced with carousel) */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeProject.title}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                className="relative overflow-hidden rounded-2xl border border-border/60 bg-card shadow-soft"
               >
-                <ChevronUp className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5" />
-                Mostrar Menos
-              </button>
+                <div
+                  className="h-1 w-full"
+                  style={{ backgroundColor: activeProject.themeColor || "#6366f1" }}
+                />
+
+                <div className="p-6 md:p-8 grid lg:grid-cols-12 gap-8 items-center">
+                  {/* Cover Preview + Action Buttons */}
+                  <div className="lg:col-span-5 flex flex-col gap-4">
+                    <div className="relative overflow-hidden rounded-xl aspect-[16/10] border border-border/60 bg-black/20">
+                      <img
+                        src={activeProject.image}
+                        alt={activeProject.title}
+                        className="w-full h-full object-cover object-top"
+                      />
+                      <div className="absolute bottom-3 right-3 flex -space-x-1.5">
+                        {activeProject.tags.map((tag) => {
+                          const info = getTechIcon(tag);
+                          return (
+                            <div
+                              key={tag}
+                              className="size-8 rounded-full bg-background/95 backdrop-blur-xs border border-border flex items-center justify-center shadow-md"
+                              style={{ color: info.color }}
+                              title={tag}
+                            >
+                              {info.icon}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    <div
+                      className={`grid gap-3 ${
+                        activeProject.github && activeProject.demo ? "grid-cols-2" : "grid-cols-1"
+                      }`}
+                    >
+                      {activeProject.github && (
+                        <a
+                          href={activeProject.github}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center justify-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl border border-border text-foreground hover:bg-white/5 transition-colors"
+                          style={{ borderColor: `${activeProject.themeColor}45` }}
+                        >
+                          <Github className="size-4 shrink-0" />
+                          <span>Código</span>
+                        </a>
+                      )}
+                      {activeProject.demo && (
+                        <a
+                          href={activeProject.demo}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center justify-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl text-white shadow-sm transition-opacity hover:opacity-90"
+                          style={{ backgroundColor: activeProject.themeColor }}
+                        >
+                          <ExternalLink className="size-4 shrink-0" />
+                          <span>Prévia</span>
+                        </a>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Description, Features & Tech Pills */}
+                  <div className="lg:col-span-7 flex flex-col gap-5">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <h3
+                        className="text-2xl md:text-3xl font-display font-bold"
+                        style={{ color: activeProject.themeColor }}
+                      >
+                        {activeProject.title}
+                      </h3>
+                      <div className="flex items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={() => carouselRef.current?.prev()}
+                          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border border-border/70 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+                        >
+                          <ChevronLeft className="size-3.5" />
+                          Anterior
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => carouselRef.current?.next()}
+                          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border border-border/70 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+                        >
+                          Próximo
+                          <ChevronRight className="size-3.5" />
+                        </button>
+                      </div>
+                    </div>
+
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                      {activeProject.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {activeProject.tags.map((tag) => {
+                        const info = getTechIcon(tag);
+                        return (
+                          <span
+                            key={tag}
+                            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border border-border/70 bg-background/60"
+                          >
+                            <span style={{ color: info.color }}>{info.icon}</span>
+                            <span>{tag}</span>
+                          </span>
+                        );
+                      })}
+                    </div>
+
+                    {activeProject.features && activeProject.features.length > 0 && (
+                      <div className="pt-4 border-t border-border/50">
+                        <h4 className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mb-3 flex items-center gap-1.5">
+                          <Server className="size-3.5" style={{ color: activeProject.themeColor }} />
+                          Destaques & Funcionalidades
+                        </h4>
+                        <ul className="grid sm:grid-cols-2 gap-2 text-xs md:text-sm text-muted-foreground/90">
+                          {activeProject.features.map((feat, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <CheckCircle2
+                                className="size-4 mt-0.5 shrink-0"
+                                style={{ color: activeProject.themeColor }}
+                              />
+                              <span className="leading-snug">{feat}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Quick project selector pills */}
+            <div className="flex flex-wrap justify-center gap-2">
+              {projects.map((proj, idx) => {
+                const isActive = idx === activeIndex;
+                return (
+                  <button
+                    key={proj.title}
+                    type="button"
+                    onClick={() => carouselRef.current?.focusIndex(idx)}
+                    className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all cursor-pointer ${
+                      isActive
+                        ? "text-white border-transparent shadow-sm"
+                        : "border-border/60 bg-card/60 text-muted-foreground hover:text-foreground"
+                    }`}
+                    style={isActive ? { backgroundColor: proj.themeColor || "#6366f1" } : undefined}
+                  >
+                    {proj.title}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        ) : (
+          <>
+            <div className="grid md:grid-cols-3 gap-10 lg:gap-12">
+              {visibleProjects.map((project, i) => (
+                <ProjectCard key={project.title} project={project} index={i} />
+              ))}
+            </div>
+
+            {/* Load More / Show Less Buttons */}
+            {(hasMore || isExpandedList) && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                className="mt-14 flex flex-wrap items-center justify-center gap-4"
+              >
+                {hasMore && (
+                  <button
+                    onClick={handleLoadMore}
+                    className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm text-sm font-semibold text-foreground/80 hover:text-foreground transition-all duration-300 cursor-pointer overflow-hidden"
+                  >
+                    {/* Shimmer effect on hover */}
+                    <span className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
+
+                    {/* Left decorative line */}
+                    <span className="hidden sm:block w-12 h-px bg-gradient-to-r from-transparent to-border/60 group-hover:to-primary/40 transition-colors duration-300" />
+
+                    <span className="flex items-center gap-2">
+                      <ChevronDown className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+                      Carregar Mais Projetos
+                      <span className="inline-flex items-center justify-center px-2 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">
+                        +{nextBatchCount} de {remainingCount}
+                      </span>
+                    </span>
+
+                    {/* Right decorative line */}
+                    <span className="hidden sm:block w-12 h-px bg-gradient-to-l from-transparent to-border/60 group-hover:to-primary/40 transition-colors duration-300" />
+                  </button>
+                )}
+
+                {isExpandedList && (
+                  <button
+                    onClick={handleShowLess}
+                    className="group relative inline-flex items-center gap-2 px-6 py-4 rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm text-sm font-semibold text-muted-foreground hover:text-foreground transition-all duration-300 cursor-pointer"
+                  >
+                    <ChevronUp className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5" />
+                    Mostrar Menos
+                  </button>
+                )}
+              </motion.div>
             )}
-          </motion.div>
+          </>
         )}
       </div>
     </section>
