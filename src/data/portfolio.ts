@@ -31,6 +31,7 @@ import imgRedemaster from "@/assets/redemaster.png";
 import imgBancoDados from "@/assets/banco-dados.png";
 import imgTopicosSistemas from "@/assets/topicos-sistemas.png";
 import imgImeiCheck from "@/assets/Captura de tela 2026-11-25 112229.png";
+import imgOndaDoBem from "@/assets/onda-do-bem.png";
 
 export const personal = {
   name: "Wallace Coimbra",
@@ -346,6 +347,22 @@ export const projects: Project[] = [
       "Conteúdo prático de Design Thinking e inovação",
       "Simulado com 30 questões calibradas (Fácil, Médio e Difícil)",
       "Motor de diagnóstico mapeando pontos fortes e de revisão",
+    ],
+  },
+  {
+    title: "Onda do Bem",
+    description: `Plataforma social e comunitária multiplataforma (iOS, Android e Web) voltada para o registro, georreferenciamento e engajamento em ações ecológicas e de impacto social. Combina app em React Native + Expo + TypeScript com API RESTful em Kotlin, Spring Boot, JWT e PostgreSQL (Supabase).`,
+    image: imgOndaDoBem,
+    tags: ["React Native", "TypeScript", "Kotlin", "Spring Boot", "PostgreSQL"],
+    themeColor: "#0284c7",
+    github: "https://github.com/wallace-2105/Onda-do-bem",
+    demo: "https://onda-do-bem.vercel.app/",
+    features: [
+      "Mapa interativo com criação georreferenciada de ações ecológicas",
+      "Feed social com curtidas otimistas, comentários e ranking de impacto",
+      "Autenticação JWT completa (Access & Refresh Token) e modo visitante",
+      "Notificações em tempo real com animações e badge de não lidas",
+      "Backend RESTful em Kotlin & Spring Boot integrado ao PostgreSQL",
     ],
   },
 ];
