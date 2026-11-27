@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { Zap, Laptop, Search } from "lucide-react";
 import { aboutParagraphs, personal } from "@/data/portfolio";
 import { SectionHeading } from "@/components/SectionHeading";
-import avatarImg from "@/assets/wallace.jpg";
+import Lanyard from "@/components/ui/Lanyard";
+import profilePhoto from "@/assets/foto de perfil.jpeg";
 
 const highlights = [
   { icon: Zap, title: "Automação de Processos", text: "Redução de tarefas manuais e aumento da produtividade." },
@@ -16,26 +17,37 @@ export function About() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 lg:gap-16">
         <div className="md:col-span-5 flex flex-col gap-8">
           <SectionHeading eyebrow="Sobre mim" title={`Olá, sou ${personal.name}.`} />
-          
-          {/* Foto de Perfil Premium */}
+
+          {/* Crachá 3D Interativo */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative group max-w-[320px] w-full aspect-square self-center md:self-start mt-4"
+            className="relative w-full max-w-[360px] h-[390px] sm:h-[430px] self-center md:self-start rounded-2xl border border-border/60 bg-card/30 backdrop-blur-xs overflow-hidden"
           >
-            {/* Glowing back outline */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary to-blue-500 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
-            
-            {/* Frame border */}
-            <div className="relative size-full rounded-2xl border border-white/10 bg-neutral-900 overflow-hidden p-2 shadow-2xl">
-              <img
-                src={avatarImg}
-                alt={personal.name}
-                className="size-full object-cover rounded-xl transition-all duration-700 ease-out scale-100 group-hover:scale-105 group-hover:brightness-110 group-hover:-translate-y-1"
-              />
-            </div>
+            <div
+              aria-hidden
+              className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-primary/15 via-transparent to-blue-500/15"
+            />
+            <Lanyard
+              frontImage={profilePhoto}
+              orientation="portrait"
+              imageFit="cover"
+              finish="glossy"
+              metal="silver"
+              cardColor="#0f172a"
+              strapColor="#0f172a"
+              cornerRadius={0.25}
+              size={0.62}
+              strapLength={0.45}
+              breeze={0.35}
+              interactive={true}
+              intro={true}
+            />
+            <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-border/60 bg-background/75 px-3 py-1 text-[11px] text-muted-foreground backdrop-blur-md">
+              Arraste ou clique no crachá
+            </span>
           </motion.div>
         </div>
         <motion.div
@@ -63,7 +75,7 @@ export function About() {
               >
                 {/* Subtle gradient glow effect on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                
+
                 <Icon className="size-6 text-primary mb-3 group-hover:scale-110 transition-transform duration-500" />
                 <h4 className="font-semibold text-foreground text-sm mb-2 relative z-10">{title}</h4>
                 <p className="text-xs text-muted-foreground relative z-10 leading-relaxed">{text}</p>
