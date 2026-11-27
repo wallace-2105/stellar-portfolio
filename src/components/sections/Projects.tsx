@@ -262,6 +262,21 @@ const TECH_ICONS: Record<string, { icon: React.ReactNode; color: string }> = {
     ),
     color: "#FF4B4B",
   },
+  Kotlin: {
+    icon: (
+      <svg className="size-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="kt-proj" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#E44857" />
+            <stop offset="50%" stopColor="#C711E1" />
+            <stop offset="100%" stopColor="#7F52FF" />
+          </linearGradient>
+        </defs>
+        <path d="M2 2h20L12 12l10 10H2V2z" fill="url(#kt-proj)" />
+      </svg>
+    ),
+    color: "#7F52FF",
+  },
 };
 
 const getTechIcon = (tag: string) => {
